@@ -1,0 +1,102 @@
+! Font ---------------------------------------
+
+#define FONT InconsolataLGC Nerd Font
+#define FONT2 MesloLGS Nerd Font Mono
+!#define FONT2 InconsolataGo Nerd Font Mono
+#define ICON Font Awesome 5 Free Regular
+#define GLYPH Material Design Icons
+#define NERD_FONT Iosevka Nerd Font
+#define EMOJI Noto Color Emoji
+#define FONT_SIZE 12
+#define ICON_SIZE 14
+
+URxvt.font           : xft:FONT:style=Regular:size=FONT_SIZE, xft:FONT2:style=Medium:size=ICON_SIZE, xft:ICON:style=Regular:size=ICON_SIZE, xft:GLYPH:style=Regular:size=ICON_SIZE, xft:NERD_FONT:style=Regular:size=ICON_SIZE, xft:EMOJI:style=Regular:size=ICON_SIZE
+URxvt.boldFont       : xft:FONT:style=Bold:size=FONT_SIZE, xft:FONT2:style=Bold:size=ICON_SIZE, xft:ICON:style=Regular:size=ICON_SIZE, xft:GLYPH:style=Regular:size=ICON_SIZE, xft:NERD_FONT:style=Regular:size=ICON_SIZE, xft:EMOJI:style=Regular:size=ICON_SIZE
+URxvt.italicFont     : xft:FONT:style=Italic:size=FONT_SIZE, xft:FONT2:style=Italic:size=ICON_SIZE, xft:ICON:style=Regular:size=ICON_SIZE, xft:GLYPH:style=Regular:size=ICON_SIZE, xft:NERD_FONT:style=Regular:size=ICON_SIZE, xft:EMOJI:style=Regular:size=ICON_SIZE
+URxvt.boldItalicFont : xft:FONT:style=BoldItalic:size=FONT_SIZE, xft:FONT2:style=BoldItalic:size=ICON_SIZE, xft:ICON:style=Regular:size=ICON_SIZE, xft:GLYPH:style=Regular:size=ICON_SIZE, xft:NERD_FONT:style=Regular:size=ICON_SIZE, xft:EMOJI:style=Regular:size=ICON_SIZE
+
+Xft.dpi           : 96
+Xft.antialias     : true
+Xft.rgba          : rgb
+Xft.autohint      : true
+Xft.lcdfilter     : lcddefault
+Xft.hinting       : true
+Xft.hintstyle     : hintfull
+URxvt.letterSpace : 0
+
+! Color -------------------------------------
+
+#include "/home/josh/.urxvt/purify.Xresources"
+
+!URxvt.foreground       : #FFFFFF
+!URxvt.background       : #2F343F
+!URxvt.cursorColor      : #FFFFFF
+!URxvt.highlightReverse : true
+
+Sxiv.foreground : #FFFFFF
+Sxiv.background : #2F343F
+Sxiv.font       : NotoSans Mono Nerd Font:style=Regular:size=12
+
+! Settings ----------------------------------
+
+URxvt.perl-lib             : /usr/lib/urxvt/perl/
+URxvt.iconFile             : /home/josh/.icons/Custom/terminal.svg
+!URxvt.backgroundPixmap     : /home/josh/.urxvt/backgrounds/pixmap.png
+URxvt.windowName           : urxvt
+URxvt.windowTitle          : urxvt
+URxvt.termName             : xterm-256color
+URxvt.borderLess           : false
+!URxvt.internalBorder       : 5
+!URxvt.externalBorder       : 30
+URxvt.geometry             : 90x27
+URxvt.skipBuiltinGlyphs    : false
+URxvt.scrollTtyKeypress    : true
+URxvt.scrollTtyOutput      : false
+URxvt.scrollWithBuffer     : true
+URxvt.scrollstyle          : rxvt
+URxvt.scrollBar            : floating
+URxvt.urgentOnBell         : true
+URxvt.visualBell           : true
+URxvt.saveLines            : 100000
+URxvt.mouseWheelScrollPage : false
+URxvt.cursorBlink          : true
+URxvt.cursorBlock          : true
+!URxvt.inheritPixmap        : false
+URxvt.transparent          : false
+!URxvt.shading              : 0
+!URxvt.depth                : 32
+URxvt.secondaryScreen      : 1
+URxvt.secondaryScroll      : 0
+URxvt.iso14755             : false
+URxvt.iso14755_52          : false
+Xcursor.theme              : Bibata-Modern-Ice
+
+! Extensions --------------------------------
+
+URxvt.perl-ext-common: default,clipboard,keyboard-select,matcher,selection-to-clipboard
+
+! Clipboard [Ctrl+Shift+C/V]
+URxvt.clipboard.copycmd  : xclip -i -selection clipboard
+URxvt.clipboard.pastecmd : xclip -o -selection clipboard
+URxvt.keysym.C-S-C       : perl:clipboard:copy
+URxvt.keysym.C-S-V       : perl:clipboard:paste
+
+! Keyboard-select
+URxvt.keysym.C-Escape           : perl:keyboard-select:activate
+URxvt.keysym.C-S-S              : perl:keyboard-select:search
+URxvt.keyboard-select.clipboard : true
+
+! Kuake
+!URxvt.kuake.hotkey : grave
+
+! Matcher
+URxvt.url-launcher    : xdg-open
+URxvt.matcher.button  : 1
+
+! Font-size
+!URxvt.keysym.C-Up     : font-size:increase
+!URxvt.keysym.C-Down   : font-size:decrease
+!URxvt.keysym.C-S-Up   : font-size:incglobal
+!URxvt.keysym.C-S-Down : font-size:decglobal
+!URxvt.keysym.C-equal  : font-size:reset
+!URxvt.keysym.C-slash  : font-size:show
