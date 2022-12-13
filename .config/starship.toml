@@ -1,106 +1,81 @@
 format = """
 $status\
 ${custom.icon}\
-[](bg:#2e3440 fg:#6d597a)\
-[](bg:#3d5a80 fg:#2e3440)\
+[](bg:#282C34 fg:#81A1C1)\
+[](bg:#6E7C99 fg:#282C34)\
 $directory\
-[](bg:#2e3440 fg:#3d5a80)\
-[](bg:#f4a259 fg:#2e3440)\
-$time\
-[](bg:#2e3440 fg:#f4a259)\
-[](bg:#5b8e7d fg:#2e3440)\
+[](bg:#282C34 fg:#6E7C99)\
+[](bg:#06969A fg:#282C34)\
+${custom.docker}\
+[](bg:#282C34 fg:#06969A)\
+[](bg:#33658A fg:#282C34)\
 $cmd_duration\
-[](bg:#2e3440 fg:#5b8e7d)\
-[](bg:#bc4b51 fg:#2e3440)\
+[](bg:#282C34 fg:#33658A)\
+[](bg:#86BBD8 fg:#282C34)\
 $git_branch\
 $git_status\
-[ ](fg:#bc4b51)\
+[ ](fg:#86BBD8)\
 """
+
 command_timeout = 5000
+
 [status]
-style = "fg:#ffffff bg:#6d597a"
+style = "fg:#FFFFFF bg:#6E7C99"
 symbol = ""
 success_symbol = ""
 format = '[ $symbol ]($style)'
 map_symbol = false
 disabled = false
 
-[username]
-show_always = false
-style_user = "bg:#6d597a"
-style_root = "bg:#6d597a"
-format = '[$user]($style)'
-
-[hostname]
-ssh_only = false
-format = "[@$hostname ](bg:#6d597a)"
-trim_at = "."
-disabled = true
-
-[custom.arch]
-description = "Display arch logo"
-when = "true"
-style = "fg:#ffffff bg:#6d597a"
-format = '[$symbol(bg:#6d597a)]($style) '
-symbol = " "
-
 [custom.icon]
 description = "Display icon for each home folder"
 command = """
 if [ "$PWD" = "$HOME" ]; then
-    echo "󰋜 "
+    echo ""
 elif [ "$PWD" = "$HOME/Documents" ]; then
-    echo " "
+    echo ""
 elif [ "$PWD" = "$HOME/Downloads" ]; then
-    echo "󰞒 "
+    echo "ﲐ"
 elif [ "$PWD" = "$HOME/Music" ]; then
-    echo " "
+    echo ""
 elif [ "$PWD" = "$HOME/Pictures" ]; then
-    echo " "
+    echo ""
 elif [ "$PWD" = "$HOME/Videos" ]; then
-    echo "輸"
-elif [ "$PWD" = "$HOME/.local/bin" ]; then
-    echo " "
+    echo ""
 else
-    echo "ﱮ "
+    echo "ﱮ"
 fi
 """
 when = "true"
-style = "fg:#ffffff bg:#6d597a"
+style = "fg:#FFFFFF bg:#81A1C1"
 format = '[ $output ]($style)'
 
 [directory]
-style = "fg:#ffffff bg:#3d5a80"
+style = "fg:#FFFFFF bg:#6E7C99"
 format = '[ $path ]($style)'
-truncation_length = 2
-truncation_symbol = "~/"
+truncation_length = 3
+truncation_symbol = "..."
+
+[cmd_duration]
+min_time = 500
+style = "fg:#ffffff bg:#33658A"
+format = "[ 󰔛 $duration  ]($style)"
+disabled = false
 
 [git_branch]
 symbol = " "
-style = "fg:#ffffff bg:#bc4b51"
+style = "fg:#FFFFFF bg:#86BBD8"
 format = '[ $symbol $branch]($style)'
 
 [git_status]
-style = "fg:#ffffff bg:#bc4b51"
+style = "fg:#FFFFFF bg:#86BBD8"
 format = '[ ($all_status) ]($style)'
 
 [custom.docker]
 description = "Shows the docker symbol if the current directory has Dockerfile or docker-compose.yml files"
-style = "bg:#86BBD8"
+style = "bg:#06969A"
 format = '[$symbol]($style)'
-symbol = " 🐳 "
+symbol = "  "
 files = ["Dockerfile", "docker-compose.yml", "docker-compose.yaml"]
 when = """ command -v docker &> /dev/null; exit (echo $?); """
-disabled = true
-
-[cmd_duration]
-min_time = 500
-style = "fg:#ffffff bg:#5b8e7d"
-format = "[ 󰔛 $duration ]($style)"
-disabled = true
-
-[time]
-disabled = true
-time_format = "%l:%M %P"
-style = "fg:#ffffff bg:#f4a259"
-format = '[ $time ]($style)'
+disabled = false
