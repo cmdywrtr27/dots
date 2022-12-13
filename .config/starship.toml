@@ -20,11 +20,9 @@ $git_status\
 command_timeout = 5000
 
 [status]
-style = "fg:#FFFFFF bg:#6E7C99"
+style = "fg:#FFFFFF bg:#81A1C1"
 symbol = ""
-success_symbol = ""
 format = '[ $symbol ]($style)'
-map_symbol = false
 disabled = false
 
 [custom.icon]
