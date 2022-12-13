@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="16"
+   height="16"
+   viewBox="0 0 16 16"
+   fill="none"
+   version="1.1"
+   id="svg66"
+   sodipodi:docname="folder.old.svg"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview68"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="true"
+     inkscape:zoom="56.499353"
+     inkscape:cx="10.327552"
+     inkscape:cy="6.1328136"
+     inkscape:window-width="1920"
+     inkscape:window-height="1024"
+     inkscape:window-x="3280"
+     inkscape:window-y="30"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg66">
+    <inkscape:grid
+       type="xygrid"
+       id="grid543" />
+  </sodipodi:namedview>
+  <defs
+     id="defs56">
+    <style
+       id="current-color-scheme"
+       type="text/css">
+   .ColorScheme-Text { color:#e0def4; } .ColorScheme-Highlight { color:#5294e2; }
+  </style>
+    <linearGradient
+       id="arrongin"
+       x1="0%"
+       x2="0%"
+       y1="0%"
+       y2="100%">
+      <stop
+         offset="0%"
+         style="stop-color:#dd9b44; stop-opacity:1"
+         id="stop3" />
+      <stop
+         offset="100%"
+         style="stop-color:#ad6c16; stop-opacity:1"
+         id="stop5" />
+    </linearGradient>
+    <linearGradient
+       id="aurora"
+       x1="0%"
+       x2="0%"
+       y1="0%"
+       y2="100%">
+      <stop
+         offset="0%"
+         style="stop-color:#09D4DF; stop-opacity:1"
+         id="stop8" />
+      <stop
+         offset="100%"
+         style="stop-color:#9269F4; stop-opacity:1"
+         id="stop10" />
+    </linearGradient>
+    <linearGradient
+       id="fitdance"
+       x1="0%"
+       x2="0%"
+       y1="0%"
+       y2="100%">
+      <stop
+         offset="0%"
+         style="stop-color:#1AD6AB; stop-opacity:1"
+         id="stop13" />
+      <stop
+         offset="100%"
+         style="stop-color:#329DB6; stop-opacity:1"
+         id="stop15" />
+    </linearGradient>
+    <linearGradient
+       id="oomox"
+       x1="0%"
+       x2="0%"
+       y1="0%"
+       y2="100%">
+      <stop
+         offset="0%"
+         style="stop-color:#efefe7; stop-opacity:1"
+         id="stop18" />
+      <stop
+         offset="100%"
+         style="stop-color:#8f8f8b; stop-opacity:1"
+         id="stop20" />
+    </linearGradient>
+    <linearGradient
+       id="rainblue"
+       x1="0%"
+       x2="0%"
+       y1="0%"
+       y2="100%">
+      <stop
+         offset="0%"
+         style="stop-color:#00F260; stop-opacity:1"
+         id="stop23" />
+      <stop
+         offset="100%"
+         style="stop-color:#0575E6; stop-opacity:1"
+         id="stop25" />
+    </linearGradient>
+    <linearGradient
+       id="sunrise"
+       x1="0%"
+       x2="0%"
+       y1="0%"
+       y2="100%">
+      <stop
+         offset="0%"
+         style="stop-color: #FF8501; stop-opacity:1"
+         id="stop28" />
+      <stop
+         offset="100%"
+         style="stop-color: #FFCB01; stop-opacity:1"
+         id="stop30" />
+    </linearGradient>
+    <linearGradient
+       id="telinkrin"
+       x1="0%"
+       x2="0%"
+       y1="0%"
+       y2="100%">
+      <stop
+         offset="0%"
+         style="stop-color: #b2ced6; stop-opacity:1"
+         id="stop33" />
+      <stop
+         offset="100%"
+         style="stop-color: #6da5b7; stop-opacity:1"
+         id="stop35" />
+    </linearGradient>
+    <linearGradient
+       id="60spsycho"
+       x1="0%"
+       x2="0%"
+       y1="0%"
+       y2="100%">
+      <stop
+         offset="0%"
+         style="stop-color: #df5940; stop-opacity:1"
+         id="stop38" />
+      <stop
+         offset="25%"
+         style="stop-color: #d8d15f; stop-opacity:1"
+         id="stop40" />
+      <stop
+         offset="50%"
+         style="stop-color: #e9882a; stop-opacity:1"
+         id="stop42" />
+      <stop
+         offset="100%"
+         style="stop-color: #279362; stop-opacity:1"
+         id="stop44" />
+    </linearGradient>
+    <linearGradient
+       id="90ssummer"
+       x1="0%"
+       x2="0%"
+       y1="0%"
+       y2="100%">
+      <stop
+         offset="0%"
+         style="stop-color: #f618c7; stop-opacity:1"
+         id="stop47" />
+      <stop
+         offset="20%"
+         style="stop-color: #94ffab; stop-opacity:1"
+         id="stop49" />
+      <stop
+         offset="50%"
+         style="stop-color: #fbfd54; stop-opacity:1"
+         id="stop51" />
+      <stop
+         offset="100%"
+         style="stop-color: #0f83ae; stop-opacity:1"
+         id="stop53" />
+    </linearGradient>
+  </defs>
+  <path
+     fill="currentColor"
+     class="ColorScheme-Text"
+     d="M 3.98999,1 C 2.73999,1.015 1.82,0.971001 1.06,1.387 0.670111,1.60812 0.372141,1.9614 0.219971,2.383 0.0599707,2.821 0,3.343 0,4 v 8 c 0,0.658 0.0599707,1.179 0.219971,1.617 0.17,0.439 0.470027,0.79 0.840029,0.998 0.75,0.416 1.67999,0.37 2.92999,0.385 H 12.01 c 1.25,-0.015 2.18,0.03 2.93,-0.385 0.37,-0.207 0.67,-0.56 0.84,-0.998 C 15.94,13.179 16,12.657 16,12 V 6 C 16,5.342 15.94,4.821 15.78,4.383 15.76,4.328 15.73,4.279 15.7,4.229 L 15.68,4.172 C 15.5177,3.84147 15.2599,3.56729 14.94,3.385 14.19,2.969 13.26,3.015 12.01,3 H 8.96997 L 6.94,1 H 4 Z M 4.01001,2 H 6.53998 L 8,3.5 6.59003,5 H 3.98999 C 2.73999,5.015 1.82,4.97 1.06,5.385 1.04,5.397 1.02,5.415 1,5.428 V 4 C 1,3.408 1.05997,2.994 1.15997,2.734 1.25997,2.474 1.35999,2.363 1.54999,2.262 1.90999,2.059 2.74001,2.015 4.01001,2 Z M 9,4 h 2.99 c 1.27,0.015 2.09,0.06 2.46,0.262 0.18,0.1 0.29,0.212 0.39,0.472 C 14.94,4.994 15,5.408 15,6 v 6 c 0,0.592 -0.06,1.006 -0.16,1.266 -0.1,0.26 -0.2,0.371 -0.39,0.472 C 14.09,13.94 13.26,13.985 12,14 H 4 C 2.74,13.985 1.90999,13.94 1.54999,13.738 1.35999,13.638 1.25997,13.526 1.15997,13.266 1.05997,13.006 1,12.592 1,12 V 8 C 1,7.408 1.05997,6.994 1.15997,6.734 1.25997,6.474 1.36999,6.363 1.54999,6.262 1.91999,6.059 2.74001,6.015 4.01001,6 H 7 Z"
+     id="path58"
+     style="fill:#dedede;fill-opacity:1"
+     sodipodi:nodetypes="cccssccccccssccccccccccccccccsscccccssssccccsssscccc" />
+</svg>

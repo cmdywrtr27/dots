@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   height="16"
+   width="16"
+   version="1.1"
+   id="svg8"
+   sodipodi:docname="x-office-document-symbolic.svg"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs12" />
+  <sodipodi:namedview
+     id="namedview10"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="true"
+     inkscape:zoom="18.6786"
+     inkscape:cx="5.8623236"
+     inkscape:cy="5.7820178"
+     inkscape:window-width="1360"
+     inkscape:window-height="661"
+     inkscape:window-x="0"
+     inkscape:window-y="30"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg8">
+    <inkscape:grid
+       type="xygrid"
+       id="grid241" />
+  </sodipodi:namedview>
+  <path
+     id="rect4156"
+     style="fill:#dddddd;fill-opacity:1;stroke:none;stroke-width:0.564263"
+     d="M 3,0 A 1,1 0 0 0 2,1 v 3 11 a 1,1 0 0 0 1,1 h 5 5 a 1,1 0 0 0 1,-1 V 6 5 L 9,0 H 8 Z m 0,1 h 5 v 4 a 1,1 0 0 0 1,1 h 4 v 9 H 8 3 V 4 Z M 9,1.5 12.5,5 H 9 Z" />
+  <path
+     color="#000000"
+     d="M 6.5,7 C 5.64,7 4.932,7.708 4.932,8.568 c 0,0.86 0.708,1.569 1.568,1.569 0.86,0 1.568,-0.708 1.568,-1.569 C 8.068,7.708 7.36,7 6.5,7 Z m 0,1 A 0.56,0.56 0 0 1 7.068,8.568 C 7.068,8.888 6.82,9.137 6.5,9.137 A 0.56,0.56 0 0 1 5.932,8.568 0.56,0.56 0 0 1 6.5,8 Z m 2.568,1 v 1 h 2 V 9 Z m -4,2 v 1 h 6 v -1 z m 0,2 v 1 h 4 v -1 z"
+     font-family="sans-serif"
+     font-weight="400"
+     overflow="visible"
+     style="line-height:normal;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;text-transform:none;text-orientation:mixed;shape-padding:0;isolation:auto;mix-blend-mode:normal;fill:#dedede;marker:none"
+     id="path4" />
+</svg>
