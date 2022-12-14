@@ -1,5 +1,5 @@
 export ZSH=$HOME/.oh-my-zsh
-#ZSH_THEME="bender2"
+#ZSH_THEME="lines"
 plugins=(git zsh-autosuggestions zsh-history-substring-search zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 export PATH="$HOME/.local/bin:$PATH"
@@ -11,4 +11,6 @@ export MANPAGER='/bin/zsh -c "vim -Rn -c \"set buftype=nofile showtabline=0 ft=m
 bindkey "^[[A" history-substring-search-up
 bindkey "^[[B" history-substring-search-down
 eval "$(starship init zsh)"
-#source $HOME/.config/zsh/themes/agkozak/agkozak-zsh-prompt.plugin.zsh
+#source $HOME/.config/zsh/themes/agkozak.zsh
+#source $HOME/.config/zsh/themes/lines.zsh
+#source $HOME/.config/zsh/themes/myagnoster.zsh
