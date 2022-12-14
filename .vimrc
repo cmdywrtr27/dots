@@ -13,17 +13,18 @@ Plug 'kyoz/purify', { 'rtp': 'vim' }
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'mengelbrecht/lightline-bufferline'
+Plug 'edkolev/tmuxline.vim'
 "Plug 'vim-airline/vim-airline'
 "Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 Plug 'airblade/vim-gitgutter'
-Plug 'tpope/vim-fugitive'
-Plug 'jiangmiao/auto-pairs'
 Plug 'tmux-plugins/vim-tmux'
-Plug 'edkolev/tmuxline.vim'
 Plug 'mbbill/undotree'
 Plug 'ryanoasis/vim-devicons'
 
@@ -255,6 +256,7 @@ set viminfo='100,<9999,s100
 
 set cursorline
 set cursorcolumn
+"set signcolumn=yes
 
 set expandtab
 set smarttab
