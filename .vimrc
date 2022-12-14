@@ -1,43 +1,30 @@
 set nocompatible
 filetype off
 
-let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
-if empty(glob(data_dir . '/autoload/plug.vim'))
-  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
-
 " Plugins
 
 call plug#begin('~/.vim/plugged')
 
 Plug 'junegunn/vim-plug'
 Plug 'ycm-core/YouCompleteMe'
-"Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install() }}
-"Plug 'neoclide/coc-snippets', {'do': 'yarn install --frozen-lockfile'}
-"Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
-"Plug 'neoclide/coc-prettier', {'do': 'yarn install --frozen-lockfile'}
-"Plug 'neoclide/coc-eslint', {'do': 'yarn install --frozen-lockfile'}
-"Plug 'neoclide/coc-tslint', {'do': 'yarn install --frozen-lockfile'}
-"Plug 'neoclide/coc-css', {'do': 'yarn install --frozen-lockfile'}
-"Plug 'neoclide/coc-lists', {'do': 'yarn install --frozen-lockfile'}
-"Plug 'neoclide/coc-highlight', {'do': 'yarn install --frozen-lockfile'}
-Plug 'scrooloose/nerdtree'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-commentary'
-Plug 'itchyny/vim-gitbranch'
-Plug 'tpope/vim-fugitive'
+Plug 'connorholyday/vim-snazzy'
+Plug 'kyoz/purify', { 'rtp': 'vim' }
+"Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'mengelbrecht/lightline-bufferline'
+"Plug 'vim-airline/vim-airline'
+"Plug 'vim-airline/vim-airline-themes'
+Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-commentary'
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
 Plug 'jiangmiao/auto-pairs'
-Plug 'kyoz/purify', { 'rtp': 'vim' }
-Plug 'sonph/onehalf', { 'rtp': 'vim' }
-Plug 'frazrepo/vim-rainbow'
 Plug 'tmux-plugins/vim-tmux'
 Plug 'edkolev/tmuxline.vim'
-"Plug 'miyakogi/conoline.vim'
 Plug 'mbbill/undotree'
-Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
@@ -48,56 +35,58 @@ set modifiable
 
 " Colors
 
-"colorscheme pitch
-"colorscheme electron1
 colorscheme purify
-"colorscheme dream
 "colorscheme bubblegum-256-dark
 "colorscheme pearl
 "colorscheme onehalfdark
-"colorscheme nord
-"colorscheme Tomorrow-Night-Eighties
 "colorscheme snazzy
-set background=dark
-"set cursorline
-"set cursorcolumn
-"hi CursorLine cterm=NONE ctermbg=254 ctermfg=NONE guibg=#2b2b2b
-"hi CursorColumn cterm=NONE ctermbg=254 ctermfg=NONE guibg=#2b2b2b
-"highlight CursorLine ctermbg=Yellow cterm=bold guibg=#2b2b2b
-"highlight CursorColumn ctermbg=Yellow cterm=bold guibg=#2b2b2b
 
-let g:rainbow_active = 1
-let g:rehash256 = 1
+set background=dark
+
 let g:Hexokinase_highlighters = [ 'backgroundfull' ]
 
 syntax on
 syntax enable
 
+" Airline
+
+let g:airline_powerline_fonts = 1
+
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.linenr = ''
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme='purify'
+
 " Lightline
 
 let g:lightline = {
-      \ 'colorscheme': 'apprentice',
+      \ 'colorscheme': 'purify',
       \ 'mode_map': { 'c': 'NORMAL' },
       \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'absolutepath' ], [ 'readonly', 'modified' ] ],
+      \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ], [ 'readonly', 'modified' ] ],
       \   'right': [ [ 'lineinfo' ], [ 'filetype' ] ],
       \ },
       \ 'component_function': {
-      \   'fugitive': 'LightLineFugitive',
-      \   'gitbranch': 'branch#name',
+      \   'fugitive': 'LightlineFugitive',
       \   'readonly': 'RO',
       \   'modified': 'Mod',
-      \   'filename': 'LightLineFilename',
-      \   'fileformat': 'LightLineFileformat',
-      \   'filetype': 'MyFiletype',
-      \   'fileencoding': 'LightLineFileencoding',
-      \   'mode': 'LightLineMode',
+      \   'filetype': 'LightlineFileType',
+      \   'filename': 'LightlineFileName',
+      \   'mode': 'LightlineMode',
       \ },
       \ 'component': {
       \   'absolutepath': '%f',
       \   'lineinfo': '%P  %l/%L:%c',
       \   'paste': '%{&paste?"PASTE":""}',
-      \   'filename': '%F',
       \ },
       \ 'component_expand': {
       \   'buffers': 'lightline#bufferline#buffers',
@@ -132,6 +121,43 @@ let g:lightline = {
 "      \ 'separator': { 'left': "\ue0b0", 'right': "\ue0b2"  },
 "      \ 'subseparator': { 'left': "\ue0b1", 'right': "\ue0b3"  },
 
+function! Mod()
+  return &ft =~ 'help\|vimfiler' ? '' : &modified ? '[+] ' : &modifiable ? '' : ''
+endfunction
+
+function! RO()
+  return &ft !~? 'help\|vimfiler' && &readonly ? ' ' : ''
+endfunction
+
+function! LightlineFugitive()
+  try
+	if expand('%:t') !~? 'Tagbar\|Gundo\|NERD' && &ft !~? 'vimfiler' && exists('*FugitiveHead')
+	  let mark = ' '
+	  let branch = FugitiveHead()
+	  return branch !=# '' ? mark.branch : ''
+	endif
+  catch
+  endtry
+  return ''
+endfunction
+
+function! LightlineFileName()
+let l:filePath = expand('%')
+    if winwidth(0) > 25
+        return l:filePath
+    else
+        return pathshorten(l:filePath)
+    endif
+endfunction
+
+function! LightlineFileType()
+  return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
+endfunction
+
+function! LightlineMode()
+  return winwidth(0) > 60 ? lightline#mode() : ''
+endfunction"
+
 let g:tmuxline_theme = {
     \ 'lightline' }
 
@@ -151,57 +177,18 @@ let g:tmuxline_preset = {
     \'z'    : '%B %d' }
 
 let g:Powerline_symbols = 'fancy'
-let g:unite_force_overwrite_statusline = 0
-let g:vimfiler_force_overwrite_statusline = 0
-let g:vimshell_force_overwrite_statusline = 0
 let g:webdevicons_enable_lightline_statusline = 1
 let g:lightline#bufferline#show_number = 0
 let g:lightline#bufferline#unicode_symbols = 1
 let g:lightline#bufferline#enable_devicons = 1
 let g:lightline#bufferline#enable_nerdfont = 1
-let g:lightline#bufferline#unnamed = '[No Name]'
+let g:lightline#bufferline#unnamed = '[New File]'
 let g:lightline#bufferline#number_separator = ' '
 let g:lightline#bufferline#more_buffers = '...'
 let g:lightline#bufferline#modified = ' [+]'
 let g:lightline#bufferline#read_only = ' '
 let g:lightline#bufferline#clickable = 1
 let g:lightline#bufferline#shorten_path = 0
-
-function! Mod()
-  return &ft =~ 'help\|vimfiler' ? '' : &modified ? '[+] ' : &modifiable ? '' : ''
-endfunction
-
-function! RO()
-  return &ft !~? 'help\|vimfiler' && &readonly ? ' ' : ''
-endfunction
-
-function! LightLineFugitive()
-  try
-	if expand('%:t') !~? 'Tagbar\|Gundo\|NERD' && &ft !~? 'vimfiler' && exists('*FugitiveHead')
-	  let mark = '  ' " 
-	  let branch = FugitiveHead()
-	  return branch !=# '' ? mark.branch : ''
-	endif
-  catch
-  endtry
-  return ''
-endfunction
-
-function! MyFileformat()
-  return winwidth(0) > 70 ? (&fileformat . ' ' . WebDevIconsGetFileFormatSymbol()) : ''
-endfunction
-
-function! MyFiletype()
-  return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
-endfunction
-
-function! MyFileencoding()
-  return winwidth(0) > 70 ? (strlen(&fenc) ? &fenc : &enc . ' ' . WebDevIconsGetFileEncodingSymbol()) : ''
-endfunction
-
-function! LightLineMode()
-  return winwidth(0) > 60 ? lightline#mode() : ''
-endfunction"
 
 " Remaps
 
@@ -210,13 +197,6 @@ let mapleader = " "
 vnoremap <silent><leader>y y:call ClipboardYank()<CR>
 vnoremap <silent><leader>d d:call ClipboardYank()<CR>
 nnoremap <silent><leader>p :call ClipboardPaste()<CR>
-
-map 0 ^
-
-nmap <M-j> mz:m+<CR>`z
-nmap <M-k> mz:m-2<CR>`z
-vmap <M-j> :m'>+<CR>`<my`>mzgv`yo`z
-vmap <M-k> :m'<-2<CR>`>my`<mzgv`yo`z
 
 map <C-j> <C-W>j
 map <C-k> <C-W>k
@@ -237,12 +217,6 @@ map <leader>t<leader> :tabnext
 vnoremap <silent> * :<C-u>call VisualSelection('', '')<CR>/<C-R>=@/<CR><CR>
 vnoremap <silent> # :<C-u>call VisualSelection('', '')<CR>?<C-R>=@/<CR><CR>
 
-let g:lasttab = 1
-nmap <Leader>tl :exe "tabn ".g:lasttab<CR>
-au TabLeave * let g:lasttab = tabpagenr()
-
-map <leader>te :tabedit <C-r>=expand("%:p:h")<CR>/
-
 map <leader>cd :cd %:p:h<cr>:pwd<CR>
 
 imap jj <Esc>
@@ -252,11 +226,12 @@ map <leader>ww :wq!<CR>
 map <C-n> :NERDTreeToggle<CR>
 map <C-u> :UndotreeToggle<CR>
 
-" Basic Settings
+map <C-f> :Files!<CR>
 
 map <leader>pp :setlocal paste!<CR>
 
-let g:clipbrdDefaultReg = '+'
+" Basic Settings
+
 set clipboard=unnamedplus
 
 set number
@@ -272,14 +247,14 @@ set matchpairs+=<:>
 
 set gdefault
 
-set title
-set titlestring=%F
-
 set laststatus=2
 set showtabline=2
 set guioptions-=e
 
 set viminfo='100,<9999,s100
+
+set cursorline
+set cursorcolumn
 
 set expandtab
 set smarttab
@@ -350,11 +325,8 @@ set smartcase
 
 set incsearch
 
-augroup vimrc-incsearch-highlight
-      autocmd!
-      autocmd CmdlineEnter /,\? :set hlsearch
-      autocmd CmdlineLeave /,\? :set nohlsearch
-augroup END
+set title
+set titlestring=%f
 
 set lazyredraw
 
@@ -368,6 +340,10 @@ set visualbell
 set t_vb=
 set tm=500
 
+set formatoptions-=cro
+
+set history=1000
+
 command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
 
 command! Bclose call <SID>BufcloseCloseIt()
@@ -378,9 +354,15 @@ let g:NERDTreeWinSize = 25
 let NERDTreeShowHidden = 1
 let NERDTreeMinimalUI = 1
 
-set formatoptions-=cro
+" Vim Stuff
 
-set history=1000
+autocmd BufReadPost,FileReadPost,BufNewFile * call system("tmux rename-window %")
+
+augroup vimrc-incsearch-highlight
+      autocmd!
+      autocmd CmdlineEnter /,\? :set hlsearch
+      autocmd CmdlineLeave /,\? :set nohlsearch
+augroup END
 
 set autoread
 au FocusGained,BufEnter * checktime
@@ -401,7 +383,16 @@ if exists('+termguicolors')
     set termguicolors
 endif
 
-" Vim Stuff
+inoremap <silent><expr> <TAB>
+      \ coc#pum#visible() ? coc#pum#next(1) :
+      \ CheckBackspace() ? "\<Tab>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
+
+function! CheckBackspace() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
 
 function! <SID>StripTrailingWhitespaces()
   if !&binary && &filetype != 'diff'
@@ -419,8 +410,6 @@ function! HasPaste()
     endif
     return ''
 endfunction
-
-command! Bclose call <SID>BufcloseCloseIt()
 
 function! <SID>BufcloseCloseIt()
     let l:currentBufNum = bufnr("%")
@@ -469,18 +458,6 @@ endfunction
 function! ClipboardPaste()
 	let @@ = system('xclip -o -selection clipboard')
 endfunction
-
-function! CleanExtraSpaces()
-    let save_cursor = getpos(".")
-    let old_query = getreg('/')
-    silent! %s/\s\+$//e
-    call setpos('.', save_cursor)
-    call setreg('/', old_query)
-endfun
-
-if has("autocmd")
-    autocmd BufWritePre *.txt,*.js,*.py,*.wiki,*.sh,*.coffee :call CleanExtraSpaces()
-endif
 
 autocmd BufReadPost *
      \ if line("'\"") > 0 && line("'\"") <= line("$") |
