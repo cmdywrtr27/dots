@@ -6,7 +6,7 @@ source $HOME/.config/zsh/functions.zsh
 bindkey "^[[A" history-substring-search-up
 bindkey "^[[B" history-substring-search-down
 setopt no_auto_remove_slash
-eval "$(starship init zsh)"
+#eval "$(starship init zsh)"
 #source $HOME/.config/zsh/themes/agkozak.zsh
 #source $HOME/.config/zsh/themes/lines.zsh
-#source $HOME/.config/zsh/themes/myagnoster.zsh
+source $HOME/.config/zsh/themes/agnoster-gaps.zsh
