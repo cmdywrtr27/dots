@@ -23,7 +23,7 @@ function reset_background
         #resize the image's height to 300px & extent it to cover the urxvt length
         convert "$src" -resize 300x "$COVER"
         if [[ -f "$COVER" ]] ; then
-          printf "\e]20;${COVER};100x100+1+50:op=keep-aspect\a"
+          printf "\e]20;${COVER};100x100+0+1:op=keep-aspect\a"
         else
             reset_background
         fi
