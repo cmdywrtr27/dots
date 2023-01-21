@@ -1,0 +1,79 @@
+format = """
+$status\
+${custom.icon}\
+[](bg:#282C34 fg:#5FAFFF)\
+[](bg:#3E4452 fg:#282C34)\
+$directory\
+[](bg:#282C34 fg:#3E4452)\
+[](bg:#5FAFFF fg:#282C34)\
+${custom.docker}\
+[](bg:#282C34 fg:#5FAFFF)\
+[](bg:#3E4452 fg:#282C34)\
+$cmd_duration\
+[](bg:#282C34 fg:#3E4452)\
+[](bg:#5FAFFF fg:#282C34)\
+$git_branch\
+$git_status\
+[ ](fg:#5FAFFF)\
+"""
+
+command_timeout = 5000
+
+[status]
+style = "fg:#FF0000 bg:#5FAFFF"
+symbol = ""
+format = '[ $symbol ]($style)'
+disabled = false
+
+[custom.icon]
+description = "Display icon for each home folder"
+command = """
+if [ "$PWD" = "$HOME" ]; then
+    echo ""
+elif [ "$PWD" = "$HOME/Documents" ]; then
+    echo ""
+elif [ "$PWD" = "$HOME/Downloads" ]; then
+    echo "ﲐ"
+elif [ "$PWD" = "$HOME/Music" ]; then
+    echo ""
+elif [ "$PWD" = "$HOME/Pictures" ]; then
+    echo ""
+elif [ "$PWD" = "$HOME/Videos" ]; then
+    echo ""
+else
+    echo "ﱮ"
+fi
+"""
+when = "true"
+style = "fg:#3E4452 bg:#5FAFFF"
+format = '[ $output ]($style)'
+
+[directory]
+style = "fg:#FFFFFF bg:#3E4452"
+format = '[ $path ]($style)'
+truncation_length = 3
+truncation_symbol = "..."
+
+[custom.docker]
+description = "Shows the docker symbol if the current directory has Dockerfile or docker-compose.yml files"
+style = "bg:#5FAFFF"
+format = '[$symbol ]($style)'
+symbol = "  "
+files = ["Dockerfile", "docker-compose.yml", "docker-compose.yaml"]
+when = """ command -v docker &> /dev/null; exit (echo $?); """
+disabled = false
+
+[cmd_duration]
+min_time = 500
+style = "fg:#ffffff bg:#3E4452"
+format = "[ 󰔛 $duration  ]($style)"
+disabled = false
+
+[git_branch]
+symbol = " "
+style = "fg:#FFFFFF bg:#5FAFFF"
+format = '[ $symbol $branch]($style)'
+
+[git_status]
+style = "fg:#FFFFFF bg:#5FAFFF"
+format = '[ ($all_status) ]($style)'
