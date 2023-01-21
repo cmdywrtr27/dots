@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   sodipodi:docname="document-open-recent-symbolic2.svg"
+   id="svg13"
+   version="1.1"
+   height="16"
+   width="16"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview15"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="true"
+     inkscape:zoom="37.500717"
+     inkscape:cx="13.279746"
+     inkscape:cy="8.5065041"
+     inkscape:window-width="1920"
+     inkscape:window-height="977"
+     inkscape:window-x="3280"
+     inkscape:window-y="26"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg13">
+    <inkscape:grid
+       type="xygrid"
+       id="grid244" />
+  </sodipodi:namedview>
+  <defs
+     id="defs3">
+    <style
+       id="current-color-scheme"
+       type="text/css">.ColorScheme-Text { color:#dedede; }</style>
+  </defs>
+  <g
+     style="fill:currentColor"
+     class="ColorScheme-Text"
+     id="g11"
+     transform="matrix(0.86955319,0,0,0.86955319,1.0435745,1.0435745)">
+    <path
+       d="M 8,-0.05011132 C 3.5540463,-0.05011133 -0.05011133,3.5540463 -0.05011132,8 -0.05011115,12.445954 3.5540464,16.050111 8,16.050111 12.445953,16.050111 16.050111,12.445953 16.050111,8 16.050111,3.5540464 12.445954,-0.05011115 8,-0.05011132 Z M 8,1.0999045 c 3.890209,3e-7 6.900095,3.0098862 6.900095,6.9000955 0,3.890209 -3.009886,6.900095 -6.900095,6.900095 C 4.1097907,14.900095 1.0999048,11.890209 1.0999045,8 1.0999045,4.1097905 4.1097905,1.0999045 8,1.0999045 Z"
+       id="path5"
+       style="stroke-width:1.00626"
+       sodipodi:nodetypes="ssssssssss" />
+    <path
+       id="rect7"
+       d="m 8.5750079,2.2499204 c 0.3185544,0 0.575008,0.2450202 0.575008,0.5493724 v 5.8013507 c 0,0.3043523 -0.2564536,0.5493724 -0.575008,0.5493724 C 8.2564535,9.1500159 8,8.9049958 8,8.6006435 V 2.7992928 C 8,2.4949406 8.2564535,2.2499204 8.5750079,2.2499204 Z"
+       sodipodi:nodetypes="sssssss"
+       style="stroke-width:1.12409" />
+    <path
+       id="rect9"
+       d="m 9.1500159,8.5750079 c 0,0.3185544 -0.2460851,0.575008 -0.5517603,0.575008 H 2.8046842 c -0.3056752,0 -0.5517603,-0.2564536 -0.5517603,-0.575008 C 2.2529239,8.2564536 2.499009,8 2.8046842,8 h 5.7935714 c 0.3056752,0 0.5517603,0.2564536 0.5517603,0.5750079 z"
+       sodipodi:nodetypes="sssssss"
+       style="stroke-width:1.12653" />
+  </g>
+</svg>

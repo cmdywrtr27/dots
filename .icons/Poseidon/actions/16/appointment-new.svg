@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   viewBox="0 0 16 16"
+   id="svg1432"
+   sodipodi:docname="appointment-new2.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1434"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="true"
+     inkscape:zoom="45.593734"
+     inkscape:cx="7.3913666"
+     inkscape:cy="8.3125458"
+     inkscape:window-width="1920"
+     inkscape:window-height="977"
+     inkscape:window-x="3280"
+     inkscape:window-y="26"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1432">
+    <inkscape:grid
+       type="xygrid"
+       id="grid1553" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1426">
+    <inkscape:path-effect
+       effect="fillet_chamfer"
+       id="path-effect1636"
+       is_visible="true"
+       lpeversion="1"
+       nodesatellites_param="F,0,0,1,0,0,0,1 @ F,0,1,1,0,0.5,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1"
+       unit="px"
+       method="auto"
+       mode="F"
+       radius="0.5"
+       chamfer_steps="1"
+       flexible="false"
+       use_knot_distance="true"
+       apply_no_radius="true"
+       apply_with_radius="true"
+       only_selected="true"
+       hide_knots="false" />
+    <inkscape:path-effect
+       effect="fillet_chamfer"
+       id="path-effect1634"
+       is_visible="true"
+       lpeversion="1"
+       nodesatellites_param="F,0,1,1,0,0.5,0,1 @ F,0,0,1,0,0,0,1 @ F,0,1,1,0,0.5,0,1 @ F,0,1,1,0,0.5,0,1 @ F,0,0,1,0,0,0,1 @ F,0,1,1,0,0.5,0,1"
+       unit="px"
+       method="auto"
+       mode="F"
+       radius="0.5"
+       chamfer_steps="1"
+       flexible="false"
+       use_knot_distance="true"
+       apply_no_radius="true"
+       apply_with_radius="true"
+       only_selected="true"
+       hide_knots="false" />
+    <style
+       id="current-color-scheme"
+       type="text/css">.ColorScheme-Text {
+        color:#dedede;
+      }</style>
+  </defs>
+  <path
+     class="ColorScheme-Text"
+     d="m 7,4.5 v 4 A 0.5,0.5 45 0 0 7.5,9 h 4 C 11.776142,9 12,8.7761424 12,8.5 12,8.2238576 11.776142,8 11.5,8 H 8 V 4.5 C 8,4.2238576 7.7761424,4 7.5,4 7.2238576,4 7,4.2238576 7,4.5 Z"
+     fill="currentColor"
+     id="path1428"
+     sodipodi:nodetypes="ccccccc" />
+  <path
+     d="M 8,1 C 4.1340068,1 1,4.1340068 1,8 c 0,3.865993 3.1340068,7 7,7 3.865993,0 7,-3.134007 7,-7 C 15,4.1340068 11.865993,1 8,1 Z m 0,1 c 3.382744,0 6,2.6172559 6,6 0,3.382744 -2.617256,6 -6,6 C 4.6172559,14 2,11.382744 2,8 2,4.6172559 4.6172559,2 8,2 Z"
+     style="fill:currentColor;stroke-width:0.875"
+     class="ColorScheme-Text"
+     id="path1430"
+     sodipodi:nodetypes="ssssssssss" />
+</svg>

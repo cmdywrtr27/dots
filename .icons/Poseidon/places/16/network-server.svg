@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="16"
+   height="16"
+   version="1.1"
+   id="svg7345"
+   sodipodi:docname="network-server-symbolic.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs7349" />
+  <sodipodi:namedview
+     id="namedview7347"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="true"
+     inkscape:zoom="36.427026"
+     inkscape:cx="7.1238317"
+     inkscape:cy="9.2376468"
+     inkscape:window-width="1920"
+     inkscape:window-height="988"
+     inkscape:window-x="1920"
+     inkscape:window-y="22"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg7345">
+    <inkscape:grid
+       type="xygrid"
+       id="grid7468" />
+  </sodipodi:namedview>
+  <path
+     id="rect7522"
+     style="fill:#dedede;stroke-width:0;stroke-miterlimit:10;paint-order:stroke fill markers"
+     d="M 1,1.9754861 V 15 H 15 V 1.9754861 Z m 1,1 h 12 v 3 H 2 Z m 0,4 h 12 v 3 H 2 Z m 0,3.9999999 h 12 v 3 H 2 Z"
+     sodipodi:nodetypes="cccccccccccccccccccc" />
+  <path
+     id="rect10344"
+     style="fill:#dedede;stroke-width:0;stroke-miterlimit:10;paint-order:stroke fill markers"
+     d="M 3,4 H 4 V 5 H 3 Z" />
+  <path
+     id="path10347"
+     style="fill:#dedede;stroke-width:0;stroke-miterlimit:10;paint-order:stroke fill markers"
+     d="m 12,12 h 1 v 1 h -1 z" />
+  <path
+     id="path10349"
+     style="fill:#dedede;stroke-width:0;stroke-miterlimit:10;paint-order:stroke fill markers"
+     d="m 10,12 h 1 v 1 h -1 z" />
+  <path
+     id="path10351"
+     style="fill:#dedede;stroke-width:0;stroke-miterlimit:10;paint-order:stroke fill markers"
+     d="m 5,12 h 1 v 1 H 5 Z" />
+  <path
+     id="path10353"
+     style="fill:#dedede;stroke-width:0;stroke-miterlimit:10;paint-order:stroke fill markers"
+     d="m 3,12 h 1 v 1 H 3 Z" />
+  <path
+     id="path10355"
+     style="fill:#dedede;stroke-width:0;stroke-miterlimit:10;paint-order:stroke fill markers"
+     d="m 10,8 h 1 v 1 h -1 z" />
+  <path
+     id="path10357"
+     style="fill:#dedede;stroke-width:0;stroke-miterlimit:10;paint-order:stroke fill markers"
+     d="m 12,8 h 1 v 1 h -1 z" />
+  <path
+     id="path10359"
+     style="fill:#dedede;stroke-width:0;stroke-miterlimit:10;paint-order:stroke fill markers"
+     d="M 5,8 H 6 V 9 H 5 Z" />
+  <path
+     id="path10361"
+     style="fill:#dedede;stroke-width:0;stroke-miterlimit:10;paint-order:stroke fill markers"
+     d="M 3,8 H 4 V 9 H 3 Z" />
+  <path
+     id="path10363"
+     style="fill:#dedede;stroke-width:0;stroke-miterlimit:10;paint-order:stroke fill markers"
+     d="m 10,4 h 1 v 1 h -1 z" />
+  <path
+     id="path10365"
+     style="fill:#dedede;stroke-width:0;stroke-miterlimit:10;paint-order:stroke fill markers"
+     d="m 12,4 h 1 v 1 h -1 z" />
+  <path
+     id="path10367"
+     style="fill:#dedede;stroke-width:0;stroke-miterlimit:10;paint-order:stroke fill markers"
+     d="M 5,4 H 6 V 5 H 5 Z" />
+</svg>
