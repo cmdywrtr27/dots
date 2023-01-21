@@ -1,0 +1,33 @@
+xrdb -load ~/.Xresources &
+
+$HOME/.screenlayout/dual.sh &
+#~/.screenlayout/triple.sh &
+
+dunst &
+
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+
+nitrogen --restore &
+#feh --bg-scale $HOME/Pictures/wallpaper.png &
+
+tint2 -c ~/.config/tint2/tint2rc &
+#plank && plank -n dock2 &
+
+$HOME/.config/polybar/Power-Arc/launch.sh &
+
+#mpd ~/.config/mpd/mpd.conf &
+#[ ! -s ~/.config/mpd/pid ] && mpd &
+[ -n "$(pidof mpd)" ] || mpd &
+
+xset b off &
+
+xfce4-power-manager &
+
+xclipboard &
+
+xset r rate 650 50
+
+picom -b &
+
+#xbindkeys &
+

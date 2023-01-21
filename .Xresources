@@ -1,0 +1,141 @@
+! Font ---------------------------------------
+
+!#define FONT InconsolataLGC Nerd Font Mono
+#define FONT MesloLGS Nerd Font Mono
+!#define FONT NotoSans Mono Nerd Font
+#define FONT2 Inconsolata Nerd Font Mono
+#define ICON Font Awesome 5 Free Regular
+#define GLYPH Material Icons
+!#define NERD_FONT NotoSans Mono Nerd Font
+#define NERD_FONT Iosevka Nerd Font
+#define EMOJI Noto Color Emoji
+#define FONT_SIZE 12
+#define ICON_SIZE 14
+
+URxvt.font           : xft:FONT:style=Regular:size=FONT_SIZE, xft:FONT2:style=Regular:size=ICON_SIZE, xft:ICON:style=Regular:size=ICON_SIZE, xft:GLYPH:style=Regular:size=ICON_SIZE, xft:NERD_FONT:style=Regular:size=ICON_SIZE, xft:EMOJI:style=Book:size=ICON_SIZE
+URxvt.boldFont       : xft:FONT:style=Bold:size=FONT_SIZE, xft:FONT2:style=Bold:size=ICON_SIZE, xft:ICON:style=Regular:size=ICON_SIZE, xft:GLYPH:style=Regular:size=ICON_SIZE, xft:NERD_FONT:style=Regular:size=ICON_SIZE, xft:EMOJI:style=Book:size=ICON_SIZE
+URxvt.italicFont     : xft:FONT:style=Italic:size=FONT_SIZE, xft:FONT2:style=Italic:size=ICON_SIZE, xft:ICON:style=Regular:size=ICON_SIZE, xft:GLYPH:style=Regular:size=ICON_SIZE, xft:NERD_FONT:style=Regular:size=ICON_SIZE, xft:EMOJI:style=Book:size=ICON_SIZE
+URxvt.boldItalicFont : xft:FONT:style=BoldItalic:size=FONT_SIZE, xft:FONT2:style=BoldItalic:size=ICON_SIZE, xft:ICON:style=Regular:size=ICON_SIZE, xft:GLYPH:style=Regular:size=ICON_SIZE, xft:NERD_FONT:style=Regular:size=ICON_SIZE, xft:EMOJI:style=Book:size=ICON_SIZE
+
+Xft.dpi           : 96
+Xft.antialias     : true
+Xft.rgba          : rgb
+Xft.autohint      : false
+Xft.lcdfilter     : lcddefault
+Xft.hinting       : true
+Xft.hintstyle     : hintfull
+URxvt.letterSpace : 0
+
+! Color -------------------------------------
+
+!#include "/home/josh/.urxvt/purify.Xresources"
+
+! Purify
+#define black0      #282C34
+#define black1      #1D2637
+#define black2      #1D2637
+#define black3      #1D2637
+#define red0        #FF6059
+#define red1        #FF6059
+#define green0      #5FFF98
+#define green1      #5FFF87
+#define yellow0     #FFFF87
+#define yellow1     #FFFF87
+#define blue0       #5FAFFF
+#define blue1       #5FAFFF
+#define magenta0    #AF87FF
+#define magenta1    #AF87FF
+#define cyan0       #5FAFFF
+#define cyan1       #5FAFFF
+#define white0      #FFFFFF
+#define white1      #FFFFFF
+#define white2      #FFFFFF
+
+*.color1 : red0
+*.color2 : green0
+*.color3 : yellow0
+*.color4 : blue0
+*.color5 : magenta0
+*.color6 : cyan0
+
+*.color9  : red1
+*.color10 : green1
+*.color11 : yellow1
+*.color12 : blue1
+*.color13 : magenta1
+*.color14 : cyan1
+
+*.foreground  : white0
+*.background  : black0
+*.cursorColor : white0
+*.borderColor : black0
+
+*.color0 : black2
+*.color7 : white1
+
+*.color8  : black3
+*.color15 : white2
+
+!*.foreground  : black0
+!*.background  : white0
+!*.cursorColor : black0
+!*.borderColor : white0
+
+!*.color0 : white1
+!*.color7 : black2
+
+!*.color8  : white2
+!*.color15 : black3
+
+! Settings ----------------------------------
+
+URxvt.perl-lib             : /usr/lib/urxvt/perl/
+URxvt.iconFile             : /home/josh/.icons/Custom/terminal.svg
+!URxvt.backgroundPixmap     : /home/josh/.urxvt/backgrounds/paper.png
+URxvt.windowName           : urxvt
+URxvt.windowTitle          : urxvt
+URxvt.termName             : xterm-256color
+URxvt.borderLess           : false
+!URxvt.internalBorder       : 20
+!URxvt.externalBorder       : 0
+URxvt.geometry             : 90x27
+URxvt.skipBuiltinGlyphs    : false
+URxvt.scrollTtyKeypress    : true
+URxvt.scrollTtyOutput      : false
+URxvt.scrollWithBuffer     : true
+URxvt.scrollstyle          : rxvt
+URxvt.scrollBar            : floating
+URxvt.urgentOnBell         : true
+URxvt.visualBell           : true
+URxvt.saveLines            : 100000
+URxvt.mouseWheelScrollPage : false
+URxvt.cursorBlink          : true
+URxvt.cursorBlock          : true
+!URxvt.inheritPixmap        : false
+URxvt.transparent          : false
+!URxvt.shading              : 0
+URxvt.depth                : 24
+URxvt.secondaryScreen      : 1
+URxvt.secondaryScroll      : 0
+URxvt.iso14755             : false
+URxvt.iso14755_52          : false
+Xcursor.theme              : Bibata-Modern-Ice
+Xcursor.size               : 24
+
+! Extensions --------------------------------
+
+URxvt.perl-ext-common: clipboard,font-size
+
+! Clipboard [Ctrl+Shift+C/V]
+URxvt.clipboard.copycmd  : xclip -i -selection clipboard
+URxvt.clipboard.pastecmd : xclip -o -selection clipboard
+URxvt.keysym.C-S-C       : perl:clipboard:copy
+URxvt.keysym.C-S-V       : perl:clipboard:paste
+
+! Font-size
+!URxvt.keysym.C-Up     : font-size:increase
+!URxvt.keysym.C-Down   : font-size:decrease
+!URxvt.keysym.C-S-Up   : font-size:incglobal
+!URxvt.keysym.C-S-Down : font-size:decglobal
+!URxvt.keysym.C-equal  : font-size:reset
+!URxvt.keysym.C-slash  : font-size:show
