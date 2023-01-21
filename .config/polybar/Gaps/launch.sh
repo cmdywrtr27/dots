@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DIR="$HOME/.config/polybar/gaps"
+DIR="$HOME/.config/polybar/Gaps"
 
 killall -q polybar
 

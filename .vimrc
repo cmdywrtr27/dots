@@ -6,20 +6,20 @@ filetype off
 call plug#begin('~/.vim/plugged')
 
 Plug 'junegunn/vim-plug'
+"Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'ycm-core/YouCompleteMe'
 Plug 'connorholyday/vim-snazzy'
 Plug 'kyoz/purify', { 'rtp': 'vim' }
-"Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'mengelbrecht/lightline-bufferline'
 Plug 'edkolev/tmuxline.vim'
 "Plug 'vim-airline/vim-airline'
 "Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree'
+Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
@@ -37,10 +37,6 @@ set modifiable
 " Colors
 
 colorscheme purify
-"colorscheme bubblegum-256-dark
-"colorscheme pearl
-"colorscheme onehalfdark
-"colorscheme snazzy
 
 set background=dark
 
@@ -73,8 +69,12 @@ let g:lightline = {
       \ 'colorscheme': 'purify',
       \ 'mode_map': { 'c': 'NORMAL' },
       \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ], [ 'readonly', 'modified' ] ],
-      \   'right': [ [ 'lineinfo' ], [ 'filetype' ] ],
+      \   'left': [ [ 'mode', 'paste' ], [ 'gap' ], [ 'fugitive', 'filename' ], [ 'gap' ], [ 'readonly', 'modified' ] ],
+      \   'right': [ [ 'lineinfo' ], [ 'gap' ], [ 'filetype' ] ]
+      \ },
+      \ 'inactive': {
+      \   'left': [ [ 'mode', 'paste' ], [ 'gap' ], [ 'fugitive', 'filename' ], [ 'gap' ], [ 'readonly', 'modified' ] ],
+      \   'right': [ [ 'lineinfo' ], [ 'gap' ], [ 'filetype' ] ]
       \ },
       \ 'component_function': {
       \   'fugitive': 'LightlineFugitive',
@@ -88,13 +88,10 @@ let g:lightline = {
       \   'absolutepath': '%f',
       \   'lineinfo': '%P  %l/%L:%c',
       \   'paste': '%{&paste?"PASTE":""}',
+      \   'gap': '',
       \ },
       \ 'component_expand': {
       \   'buffers': 'lightline#bufferline#buffers',
-      \ },
-      \ 'component_type': {
-      \   'tabs': 'tabs',
-      \   'buffers': 'tabs',
       \ },
       \ 'tabline': {
       \   'left': [ [ 'buffers' ] ],
@@ -159,24 +156,6 @@ function! LightlineMode()
   return winwidth(0) > 60 ? lightline#mode() : ''
 endfunction"
 
-"let g:tmuxline_theme = {
-"    \ 'lightline' }
-
-" let g:tmuxline_separators = {
-"     \ 'left'      : '',
-"     \ 'left_alt'  : '',
-"     \ 'right'     : '',
-"     \ 'right_alt' : '',
-"     \ 'space'     : ' ' }
-
-" let g:tmuxline_preset = {
-"     \'a'    : '#(whoami)@#H',
-"     \'b'    : ['#S'],
-"     \'win'  : ['#I #W'],
-"     \'cwin' : ['#I #W #F'],
-"     \'y'    : ['%A'],
-"     \'z'    : '%B %d' }
-
 let g:Powerline_symbols = 'fancy'
 let g:webdevicons_enable_lightline_statusline = 1
 let g:lightline#bufferline#show_number = 0
@@ -219,17 +198,14 @@ vnoremap <silent> * :<C-u>call VisualSelection('', '')<CR>/<C-R>=@/<CR><CR>
 vnoremap <silent> # :<C-u>call VisualSelection('', '')<CR>?<C-R>=@/<CR><CR>
 
 map <leader>cd :cd %:p:h<cr>:pwd<CR>
-
 imap jj <Esc>
-
 map <leader>ww :wq!<CR>
+map <leader>pp :setlocal paste!<CR>
 
 map <C-n> :NERDTreeToggle<CR>
 map <C-u> :UndotreeToggle<CR>
-
 map <C-f> :Files!<CR>
 
-map <leader>pp :setlocal paste!<CR>
 
 " Basic Settings
 
@@ -348,15 +324,13 @@ set history=1000
 
 command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
 
-command! Bclose call <SID>BufcloseCloseIt()
-
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 let g:NERDTreeWinSize = 25
 let NERDTreeShowHidden = 1
 let NERDTreeMinimalUI = 1
 
-" Vim Stuff
+" Miscellaneous
 
 autocmd BufReadPost,FileReadPost,BufNewFile * call system("tmux rename-window %")
 
