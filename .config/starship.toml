@@ -1,23 +1,26 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
 format = """
 $status\
 ${custom.icon}\
-[](bg:#282C34 fg:#5FAFFF)\
-[](bg:#3E4452 fg:#282C34)\
+[](fg:#5FAFFF bg:#282C34)\
+[](fg:#282C34 bg:#3E4452)\
 $directory\
-[](bg:#282C34 fg:#3E4452)\
-[](bg:#5FAFFF fg:#282C34)\
+[](fg:#3E4452 bg:#282C34)\
+[](fg:#282C34 bg:#5FAFFF)\
 ${custom.docker}\
-[](bg:#282C34 fg:#5FAFFF)\
-[](bg:#3E4452 fg:#282C34)\
+[](fg:#5FAFFF bg:#282C34)\
+[](fg:#282C34 bg:#3E4452)\
 $cmd_duration\
-[](bg:#282C34 fg:#3E4452)\
-[](bg:#5FAFFF fg:#282C34)\
+[](fg:#3E4452 bg:#282C34)\
+[](fg:#282C34 bg:#5FAFFF)\
 $git_branch\
 $git_status\
 [ ](fg:#5FAFFF)\
 """
 
 command_timeout = 5000
+add_newline = true
 
 [status]
 style = "fg:#FF0000 bg:#5FAFFF"
@@ -28,17 +31,17 @@ disabled = false
 [custom.icon]
 description = "Display icon for each home folder"
 command = """
-if [ "$PWD" = "$HOME" ]; then
+if [[ "$PWD" = "$HOME" ]] ; then
     echo ""
-elif [ "$PWD" = "$HOME/Documents" ]; then
+elif [[ "$PWD" = "$HOME/Documents" ]] ; then
     echo ""
-elif [ "$PWD" = "$HOME/Downloads" ]; then
+elif [[ "$PWD" = "$HOME/Downloads" ]] ; then
     echo "ﲐ"
-elif [ "$PWD" = "$HOME/Music" ]; then
+elif [[ "$PWD" = "$HOME/Music" ]] ; then
     echo ""
-elif [ "$PWD" = "$HOME/Pictures" ]; then
+elif [[ "$PWD" = "$HOME/Pictures" ]] ; then
     echo ""
-elif [ "$PWD" = "$HOME/Videos" ]; then
+elif [[ "$PWD" = "$HOME/Videos" ]] ; then
     echo ""
 else
     echo "ﱮ"
@@ -65,7 +68,7 @@ disabled = false
 
 [cmd_duration]
 min_time = 500
-style = "fg:#ffffff bg:#3E4452"
+style = "fg:#FFFFFF bg:#3E4452"
 format = "[ 󰔛 $duration  ]($style)"
 disabled = false
 
