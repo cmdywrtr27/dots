@@ -8,7 +8,7 @@ ${custom.icon}\
 $directory\
 [](fg:#3E4452 bg:#282C34)\
 [](fg:#282C34 bg:#5FAFFF)\
-${custom.docker}\
+$time\
 [](fg:#5FAFFF bg:#282C34)\
 [](fg:#282C34 bg:#3E4452)\
 $cmd_duration\
@@ -31,18 +31,20 @@ disabled = false
 [custom.icon]
 description = "Display icon for each home folder"
 command = """
-if [[ "$PWD" = "$HOME" ]] ; then
+if [[ "$PWD" = "$HOME" ]]; then
     echo ""
-elif [[ "$PWD" = "$HOME/Documents" ]] ; then
-    echo ""
-elif [[ "$PWD" = "$HOME/Downloads" ]] ; then
+elif [[ "$PWD" = "$HOME/Documents" ]]; then
+    echo ""
+elif [[ "$PWD" = "$HOME/Downloads" ]]; then
     echo "ﲐ"
-elif [[ "$PWD" = "$HOME/Music" ]] ; then
+elif [[ "$PWD" = "$HOME/Music" ]]; then
     echo ""
-elif [[ "$PWD" = "$HOME/Pictures" ]] ; then
+elif [[ "$PWD" = "$HOME/Pictures" ]]; then
     echo ""
-elif [[ "$PWD" = "$HOME/Videos" ]] ; then
+elif [[ "$PWD" = "$HOME/Videos" ]]; then
     echo ""
+elif [[ "$PWD" = "$HOME/.local/bin" ]]; then
+    echo "󱆃"
 else
     echo "ﱮ"
 fi
@@ -54,28 +56,30 @@ format = '[ $output ]($style)'
 [directory]
 style = "fg:#FFFFFF bg:#3E4452"
 format = '[ $path ]($style)'
-truncation_length = 3
+truncation_length = 2
 truncation_symbol = "..."
+truncate_to_repo = true
+home_symbol = '~'
+fish_style_pwd_dir_length = 2
+use_logical_path = true
+use_os_path_sep = true
 
-[custom.docker]
-description = "Shows the docker symbol if the current directory has Dockerfile or docker-compose.yml files"
+[time]
 style = "bg:#5FAFFF"
-format = '[$symbol ]($style)'
-symbol = "  "
-files = ["Dockerfile", "docker-compose.yml", "docker-compose.yaml"]
-when = """ command -v docker &> /dev/null; exit (echo $?); """
-disabled = false
+format = '[  $time ]($style)'
+time_format = '%l:%M %P'
+disabled = true
 
 [cmd_duration]
-min_time = 500
+min_time = 750
 style = "fg:#FFFFFF bg:#3E4452"
-format = "[ 󰔛 $duration  ]($style)"
+format = "[ 󰔛 $duration ]($style)"
 disabled = false
 
 [git_branch]
-symbol = " "
 style = "fg:#FFFFFF bg:#5FAFFF"
 format = '[ $symbol $branch]($style)'
+symbol = " "
 
 [git_status]
 style = "fg:#FFFFFF bg:#5FAFFF"
