@@ -1,12 +1,9 @@
 ! Font ---------------------------------------
 
-!#define FONT InconsolataLGC Nerd Font Mono
 #define FONT MesloLGS Nerd Font Mono
-!#define FONT NotoSans Mono Nerd Font
 #define FONT2 Inconsolata Nerd Font Mono
 #define ICON Font Awesome 5 Free Regular
 #define GLYPH Material Icons
-!#define NERD_FONT NotoSans Mono Nerd Font
 #define NERD_FONT Iosevka Nerd Font
 #define EMOJI Noto Color Emoji
 #define FONT_SIZE 12
@@ -28,8 +25,6 @@ URxvt.letterSpace : 0
 
 ! Color -------------------------------------
 
-!#include "/home/josh/.urxvt/purify.Xresources"
-
 ! Purify
 #define black0      #282C34
 #define black1      #1D2637
@@ -50,6 +45,8 @@ URxvt.letterSpace : 0
 #define white0      #FFFFFF
 #define white1      #FFFFFF
 #define white2      #FFFFFF
+
+#define grey        #3E4452
 
 *.color1 : red0
 *.color2 : green0
