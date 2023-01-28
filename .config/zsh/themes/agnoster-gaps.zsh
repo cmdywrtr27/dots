@@ -116,21 +116,21 @@ prompt_agnoster_main() {
 }
 
 prompt_icon() {
-    if [[ "$PWD" = "$HOME" ]] ; then
-      prompt_segment '#3E4452' white ' '
-    elif [[ "$PWD" = "$HOME/Documents" ]] ; then
-      prompt_segment '#3E4452' white ' '
-    elif [[ "$PWD" = "$HOME/Downloads" ]] ; then
-      prompt_segment '#3E4452' white 'ﲐ '
-    elif [[ "$PWD" = "$HOME/Music" ]] ; then
-      prompt_segment '#3E4452' white ' '
-    elif [[ "$PWD" = "$HOME/Pictures" ]] ; then
-      prompt_segment '#3E4452' white ' '
-    elif [[ "$PWD" = "$HOME/Videos" ]] ; then
-      prompt_segment '#3E4452' white ' '
-    elif [[ "$PWD" = "$HOME/.local/bin" ]] ; then
-      prompt_segment '#3E4452' white ' '
-    else prompt_segment '#3E4452' white 'ﱮ '
+  if [[ "$PWD" = "$HOME" ]]; then
+prompt_segment '#3E4452' white ' '
+  elif [[ "$PWD" = "$HOME/Documents" ]]; then
+prompt_segment '#3E4452' white ' '
+  elif [[ "$PWD" = "$HOME/Downloads" ]]; then
+prompt_segment '#3E4452' white 'ﲐ '
+  elif [[ "$PWD" = "$HOME/Music" ]]; then
+prompt_segment '#3E4452' white ' '
+  elif [[ "$PWD" = "$HOME/Pictures" ]]; then
+prompt_segment '#3E4452' white ' '
+  elif [[ "$PWD" = "$HOME/Videos" ]]; then
+prompt_segment '#3E4452' white ' '
+  elif [[ "$PWD" = "$HOME/.local/bin" ]]; then
+prompt_segment '#3E4452' white ' '
+  else prompt_segment '#3E4452' white 'ﱮ '
 fi
 }
 

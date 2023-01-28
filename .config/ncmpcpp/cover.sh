@@ -19,11 +19,11 @@ function reset_background
     covers="$(find "$album_dir" -type d -exec find {} -maxdepth 1 -type f -iregex ".*/.*\(${album}\|cover\|folder\|artwork\|front\).*[.]\(jpe?g\|png\|gif\|bmp\)" \; )"
     src="$(echo -n "$covers" | head -n1)"
     rm -f "$COVER"
-    if [[ -n "$src" ]] ; then
+    if [[ -n "$src" ]]; then
         #resize the image's height to 300px & extent it to cover the urxvt length
         convert "$src" -resize 300x "$COVER"
-        if [[ -f "$COVER" ]] ; then
-          printf "\e]20;${COVER};100x100+0+1:op=keep-aspect\a"
+        if [[ -f "$COVER" ]]; then
+          printf "\e]20;${COVER};100x95+0+0:op=keep-aspect\a"
         else
             reset_background
         fi
@@ -32,10 +32,10 @@ function reset_background
     fi
 
 # Notifications
-    if [[ -n "$src" ]] ; then
+    if [[ -n "$src" ]]; then
         # Resize the image's width to 128px
         convert "$src" -resize 128x "$COVER"
-        if [[ -f "$COVER" ]] ; then
+        if [[ -f "$COVER" ]]; then
             notify-send -u low -i ${COVER} "  Now Playing:" "`mpc current`"
         fi
     fi

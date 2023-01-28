@@ -19,7 +19,7 @@
 		<separator/>
 		<item label="Search">
 			<action name="Execute">
-                <execute>$HOME/.config/rofi/launchers/type-1/launcher.sh</execute>
+                <execute>/home/josh/.config/rofi/launchers/type-2/launcher.sh</execute>
 			</action>
 		</item>
 		<separator/>

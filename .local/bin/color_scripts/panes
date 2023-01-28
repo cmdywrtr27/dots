@@ -11,5 +11,5 @@ t=$'\e[0m' # reset
 v=$'\e[7m' # reverse
 
 cat << EOF
-  $f1  $d$t$f2  $d$t$f3  $d$t$f4  $d$t$f5  $d$t$f6  $d$t$f7 
+   $f1  $t$f2  $t$f3  $t$f4  $t$f5  $t$f6  $t$f7
 EOF

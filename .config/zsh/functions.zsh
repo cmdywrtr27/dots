@@ -15,7 +15,7 @@ echo ${WEATHERARRAY[@]}
 # Translate a word (translate car french)
 translate() {
 TRANSLATED=`lynx -dump "http://dictionary.reference.com/browse/${1}" | grep -i -m 1 -w "${2}:" | sed 's/^[ \t]*//;s/[ \t]*$//'`
-if [[ ${#TRANSLATED} != 0 ]] ; then
+if [[ ${#TRANSLATED} != 0 ]]; then
     echo "\"${1}\" in ${TRANSLATED}"
     else
     echo "Sorry, I can not translate \"${1}\" to ${2}"
@@ -24,8 +24,8 @@ fi
 
 # Define a word (define selfish)
 define() {
-lynx -dump "http://www.google.com/search?hl=en&q=define%3A+${1}&btnG=Google+Search" | grep -m 3 -w "*"  | sed 's/;/ -/g' | cut -d- -f1 > /tmp/templookup.txt
-            if [[ -s  /tmp/templookup.txt ]] ; then
+lynx -dump "http://www.google.com/search?hl=en&q=define%3A+${1}&btnG=Google+Search" | grep -m 3 -w "*" | sed 's/;/ -/g' | cut -d- -f1 > /tmp/templookup.txt
+            if [[ -s  /tmp/templookup.txt ]]; then
                 until ! read response
                     do
                     echo "${response}"
@@ -38,7 +38,7 @@ rm -f /tmp/templookup.txt
 
 # Extract tar and zip files (extract "filename")
 extract() {
-     if [[ -f $1 ]] ; then
+     if [[ -f $1 ]]; then
          case $1 in
              *.tar.bz2)   tar xjf $1 ;;
              *.tar.gz)    tar xzf $1 ;;
@@ -60,7 +60,7 @@ extract() {
 
 # Copy and go (cpg "filename")
 cpg() {
-  if [ -d "$2" ] ; then
+  if [ -d "$2" ]; then
     cp $1 $2 && cd $2
   else
     cp $1 $2
@@ -69,7 +69,7 @@ cpg() {
 
 # Move and go (mvg "filename")
 mvg() {
-  if [ -d "$2" ] ; then
+  if [ -d "$2" ]; then
     mv $1 $2 && cd $2
   else
     mv $1 $2
@@ -92,15 +92,15 @@ lynx -dump -hiddenlinks=ignore -nolist http://checkip.dyndns.org:8245/ | awk '{ 
 
 # Clock (clock)
 clock() {
-while true ; do clear ; echo "===========" ; date +"%r" ; echo "===========" ; sleep 1 ;done
+while true ; do clear ; echo "===========" ; date +" %l:%M %P" ; echo "===========" ; sleep 1 ; done
 }
 
 # Backup files (bu "filename")
 bu() {
-cp $1 ${1}-`date +%Y%m%d%H%M`.bak ;
+cp $1 ${1}-`date +%Y-%m-%d_%H:%M:%S`.bak ;
 }
 
 # List files after changing directories
 chpwd() {
-exa -G --icons --color=always
+exa -Glh --color=always --icons --sort=type --no-filesize --git --time=changed
 }
