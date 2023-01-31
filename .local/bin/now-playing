@@ -25,7 +25,7 @@ fi
 status=$(mpc status | sed -n 's/^\[\([^])]*\)\].*$/\1/p')
 
 # Crop the text by 32 characters, only pick the song name
-song=$(mpc current | awk -F ' - ' '{printf "%s", substr($2, 0, 32)}')
+#song=$(mpc current | awk -F ' - ' '{printf "%s", substr($2, 0, 32)}')
 # Or not?
 song=$(mpc current)
 case $status in
