@@ -117,20 +117,20 @@ prompt_agnoster_main() {
 
 prompt_icon() {
   if [[ "$PWD" = "$HOME" ]]; then
-prompt_segment '#3E4452' white ' '
+prompt_segment '#3E4452' '#FFFFFF' ' '
   elif [[ "$PWD" = "$HOME/Documents" ]]; then
-prompt_segment '#3E4452' white ' '
+prompt_segment '#3E4452' '#FFFFFF' ' '
   elif [[ "$PWD" = "$HOME/Downloads" ]]; then
-prompt_segment '#3E4452' white 'ﲐ '
+prompt_segment '#3E4452' '#FFFFFF' 'ﲐ '
   elif [[ "$PWD" = "$HOME/Music" ]]; then
-prompt_segment '#3E4452' white ' '
+prompt_segment '#3E4452' '#FFFFFF' ' '
   elif [[ "$PWD" = "$HOME/Pictures" ]]; then
-prompt_segment '#3E4452' white ' '
+prompt_segment '#3E4452' '#FFFFFF' ' '
   elif [[ "$PWD" = "$HOME/Videos" ]]; then
-prompt_segment '#3E4452' white ' '
+prompt_segment '#3E4452' '#FFFFFF' ' '
   elif [[ "$PWD" = "$HOME/.local/bin" ]]; then
-prompt_segment '#3E4452' white ' '
-  else prompt_segment '#3E4452' white 'ﱮ '
+prompt_segment '#3E4452' '#FFFFFF' ' '
+  else prompt_segment '#3E4452' '#FFFFFF' 'ﱮ '
 fi
 }
 

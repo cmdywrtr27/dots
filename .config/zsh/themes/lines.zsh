@@ -14,7 +14,7 @@ elif [[ "$PWD" = "$HOME/Pictures" ]]; then
 elif [[ "$PWD" = "$HOME/Videos" ]]; then
     echo " "
 elif [[ "$PWD" = "$HOME/.local/bin" ]]; then
-    echo " "
+    echo " "
 else
     echo "ﱮ "
 fi
