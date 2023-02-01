@@ -1,0 +1,29 @@
+configuration {
+  show-icons:      true;
+  icon-theme:      "Poseidon";
+  cycle:           true;
+  disable-history: false;
+  monitor:         "-4";
+  modi:            "drun";
+  display-drun:    "apps";
+  drun-display-format: "{name}";
+}
+
+/* Fixes for rofi 1.7.0 */
+window {
+  border: 0px;
+}
+inputbar {
+  spacing: -4px;
+}
+listview {
+  columns: 1;
+  scrollbar: false;
+  border: 0px;
+}
+element-text,
+element-icon {
+  background-color: transparent;
+}
+
+@theme "themes/shared/active-colorscheme.rasi"
