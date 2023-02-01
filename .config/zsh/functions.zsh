@@ -102,5 +102,5 @@ cp $1 ${1}-`date +%Y-%m-%d_%H:%M:%S`.bak ;
 
 # List files after changing directories
 chpwd() {
-exa -Glh --color=always --icons --sort=type --no-filesize --git --time=changed
+exa -l --header --icons --color=always --git --sort=name --no-user --no-time --no-filesize
 }
