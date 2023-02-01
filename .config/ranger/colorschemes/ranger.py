@@ -23,7 +23,7 @@ class Scheme(Default):
 
 		if context.border:
 			fg = blue
-			
+
 		if context.in_taskview:
 			fg = green
 
@@ -32,7 +32,7 @@ class Scheme(Default):
 				if context.good:
 					fg = magenta
 				elif context.bad:
-					fg = red 
+					fg = red
 			if context.message:
 				if context.good:
 					attr |= bold
@@ -40,5 +40,5 @@ class Scheme(Default):
 				elif context.bad:
 					attr |= bold
 					fg = red
-  
+
 		return fg, bg, attr
