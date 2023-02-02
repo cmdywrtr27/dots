@@ -1,7 +1,7 @@
 ! Font ---------------------------------------
 
-#define FONT2 MesloLGS Nerd Font Mono
-#define FONT InconsolataLGC Nerd Font
+#define FONT MesloLGS Nerd Font Mono
+#define FONT2 InconsolataLGC Nerd Font
 #define ICON Font Awesome 5 Free Regular
 #define GLYPH Material Icons
 #define NERD_FONT Iosevka Nerd Font Mono
