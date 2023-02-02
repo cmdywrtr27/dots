@@ -1,18 +1,18 @@
 ! Font ---------------------------------------
 
-#define FONT MesloLGS Nerd Font Mono
-#define FONT2 Inconsolata Nerd Font Mono
+#define FONT2 MesloLGS Nerd Font Mono
+#define FONT InconsolataLGC Nerd Font
 #define ICON Font Awesome 5 Free Regular
 #define GLYPH Material Icons
-#define NERD_FONT Iosevka Nerd Font
+#define NERD_FONT Iosevka Nerd Font Mono
 #define EMOJI Noto Color Emoji
-#define FONT_SIZE 13
-#define ICON_SIZE 13
+#define FONT_SIZE 12
+#define ICON_SIZE 14
 
-URxvt.font           : xft:FONT:style=Regular:size=FONT_SIZE, xft:FONT2:style=Regular:size=ICON_SIZE, xft:ICON:style=Regular:size=ICON_SIZE, xft:GLYPH:style=Regular:size=ICON_SIZE, xft:NERD_FONT:style=Regular:size=ICON_SIZE, xft:EMOJI:style=Book:size=ICON_SIZE
-URxvt.boldFont       : xft:FONT:style=Bold:size=FONT_SIZE, xft:FONT2:style=Bold:size=ICON_SIZE, xft:ICON:style=Regular:size=ICON_SIZE, xft:GLYPH:style=Regular:size=ICON_SIZE, xft:NERD_FONT:style=Regular:size=ICON_SIZE, xft:EMOJI:style=Book:size=ICON_SIZE
-URxvt.italicFont     : xft:FONT:style=Italic:size=FONT_SIZE, xft:FONT2:style=Italic:size=ICON_SIZE, xft:ICON:style=Regular:size=ICON_SIZE, xft:GLYPH:style=Regular:size=ICON_SIZE, xft:NERD_FONT:style=Regular:size=ICON_SIZE, xft:EMOJI:style=Book:size=ICON_SIZE
-URxvt.boldItalicFont : xft:FONT:style=BoldItalic:size=FONT_SIZE, xft:FONT2:style=BoldItalic:size=ICON_SIZE, xft:ICON:style=Regular:size=ICON_SIZE, xft:GLYPH:style=Regular:size=ICON_SIZE, xft:NERD_FONT:style=Regular:size=ICON_SIZE, xft:EMOJI:style=Book:size=ICON_SIZE
+URxvt.font           : xft:FONT:style=Regular:size=FONT_SIZE, xft:FONT2:style=Regular:size=ICON_SIZE, xft:ICON:size=ICON_SIZE, xft:GLYPH:size=ICON_SIZE, xft:NERD_FONT:style=Regular:size=ICON_SIZE, xft:EMOJI:style=Regular:size=ICON_SIZE
+URxvt.boldFont       : xft:FONT:style=Bold:size=FONT_SIZE, xft:FONT2:style=Bold:size=ICON_SIZE, xft:ICON:size=ICON_SIZE, xft:GLYPH:size=ICON_SIZE, xft:NERD_FONT:style=Regular:size=ICON_SIZE, xft:EMOJI:style=Regular:size=ICON_SIZE
+URxvt.italicFont     : xft:FONT:style=Italic:size=FONT_SIZE, xft:FONT2:style=Italic:size=ICON_SIZE, xft:ICON:size=ICON_SIZE, xft:GLYPH:size=ICON_SIZE, xft:NERD_FONT:style=Regular:size=ICON_SIZE, xft:EMOJI:style=Regular:size=ICON_SIZE
+URxvt.boldItalicFont : xft:FONT:style=BoldItalic:size=FONT_SIZE, xft:FONT2:style=BoldItalic:size=ICON_SIZE, xft:ICON:size=ICON_SIZE, xft:GLYPH:size=ICON_SIZE, xft:NERD_FONT:style=Regular:size=ICON_SIZE, xft:EMOJI:style=Regular:size=ICON_SIZE
 
 Xft.dpi           : 96
 Xft.antialias     : true
