@@ -1,4 +1,4 @@
-const determineGreet = hours => document.getElementById("greeting").innerText = `Good ${hours < 12 ? "Morning." : hours < 18 ? "Afternoon." : "Evening, Josh."}`;
+const determineGreet = hours => document.getElementById("greeting").innerText = `Good ${hours < 12 ? "Morning, Josh." : hours < 18 ? "Afternoon, Josh." : "Evening, Josh."}`;
 
 window.addEventListener('load', (event) => {
     let today = new Date();
