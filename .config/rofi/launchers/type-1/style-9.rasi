@@ -114,6 +114,7 @@ prompt {
     background-color:            inherit;
     text-color:                  inherit;
 }
+
 textbox-prompt-colon {
     enabled:                     true;
     padding:                     5px 0px;
@@ -122,6 +123,7 @@ textbox-prompt-colon {
     background-color:            inherit;
     text-color:                  inherit;
 }
+
 entry {
     enabled:                     true;
     padding:                     5px 0px;
@@ -131,12 +133,14 @@ entry {
     placeholder:                 "";
     placeholder-color:           inherit;
 }
+
 num-filtered-rows {
     enabled:                     true;
     expand:                      false;
     background-color:            inherit;
     text-color:                  inherit;
 }
+
 textbox-num-sep {
     enabled:                     true;
     expand:                      false;
@@ -144,12 +148,14 @@ textbox-num-sep {
     background-color:            inherit;
     text-color:                  inherit;
 }
+
 num-rows {
     enabled:                     true;
     expand:                      false;
     background-color:            inherit;
     text-color:                  inherit;
 }
+
 case-indicator {
     enabled:                     true;
     background-color:            inherit;
@@ -179,6 +185,7 @@ listview {
     text-color:                  @foreground-colour;
     cursor:                      "default";
 }
+
 scrollbar {
     handle-width:                5px ;
     handle-color:                @handle-colour;
@@ -199,48 +206,59 @@ element {
     text-color:                  @foreground-colour;
     cursor:                      pointer;
 }
+
 element normal.normal {
     background-color:            var(normal-background);
     text-color:                  var(normal-foreground);
 }
+
 element normal.urgent {
     background-color:            var(urgent-background);
     text-color:                  var(urgent-foreground);
 }
+
 element normal.active {
     background-color:            var(active-background);
     text-color:                  var(active-foreground);
 }
+
 element selected.normal {
     background-color:            var(selected-normal-background);
     text-color:                  var(selected-normal-foreground);
 }
+
 element selected.urgent {
     background-color:            var(selected-urgent-background);
     text-color:                  var(selected-urgent-foreground);
 }
+
 element selected.active {
     background-color:            var(selected-active-background);
     text-color:                  var(selected-active-foreground);
 }
+
 element alternate.normal {
     background-color:            var(alternate-normal-background);
     text-color:                  var(alternate-normal-foreground);
 }
+
 element alternate.urgent {
     background-color:            var(alternate-urgent-background);
     text-color:                  var(alternate-urgent-foreground);
 }
+
 element alternate.active {
     background-color:            var(alternate-active-background);
     text-color:                  var(alternate-active-foreground);
 }
+
 element-icon {
     background-color:            transparent;
     text-color:                  inherit;
     size:                        24px;
     cursor:                      inherit;
 }
+
 element-text {
     background-color:            transparent;
     text-color:                  inherit;
@@ -264,6 +282,7 @@ mode-switcher{
     background-color:            @alternate-background;
     text-color:                  @foreground-colour;
 }
+
 button {
     padding:                     0px 20px 0px 20px;
     border:                      0px 2px 0px 0px;
@@ -275,6 +294,7 @@ button {
     horizontal-align:            0.0;
     cursor:                      pointer;
 }
+
 button selected {
     border:                      2px 0px 2px 2px;
     border-radius:               8px 0px 0px 8px;
@@ -294,6 +314,7 @@ message {
     background-color:            transparent;
     text-color:                  @foreground-colour;
 }
+
 textbox {
     padding:                     12px;
     border:                      0px solid;
@@ -308,6 +329,7 @@ textbox {
     blink:                       true;
     markup:                      true;
 }
+
 error-message {
     padding:                     10px;
     border:                      2px solid;
