@@ -63,15 +63,15 @@ use_logical_path = true
 use_os_path_sep = true
 
 [time]
-style = "bg:#5FAFFF"
-format = '[  $time ]($style)'
-time_format = '%l:%M %P'
+style = "fg:#FFFFFF bg:#5FAFFF"
+format = '[ 󱑎 $time ]($style)'
+time_format = '%l:%M%P'
 disabled = true
 
 [cmd_duration]
 min_time = 750
 style = "fg:#FFFFFF bg:#3E4452"
-format = "[ 󰔚 $duration ]($style)"
+format = "[ 󰔛 $duration ]($style)"
 disabled = false
 
 [git_branch]
