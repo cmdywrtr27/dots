@@ -1,23 +1,14 @@
 ! Font ---------------------------------------
 
-#define FONT MesloLGS Nerd Font Mono
-#define FONT2 InconsolataLGC Nerd Font
-#define ICON Font Awesome 5 Free Regular
-#define GLYPH Material Icons
-#define NERD_FONT Iosevka Nerd Font Mono
-#define EMOJI Noto Color Emoji
-#define FONT_SIZE 12
-#define ICON_SIZE 14
-
-URxvt.font           : xft:FONT:style=Regular:size=FONT_SIZE, xft:FONT2:style=Regular:size=ICON_SIZE, xft:ICON:size=ICON_SIZE, xft:GLYPH:size=ICON_SIZE, xft:NERD_FONT:style=Regular:size=ICON_SIZE, xft:EMOJI:style=Regular:size=ICON_SIZE
-URxvt.boldFont       : xft:FONT:style=Bold:size=FONT_SIZE, xft:FONT2:style=Bold:size=ICON_SIZE, xft:ICON:size=ICON_SIZE, xft:GLYPH:size=ICON_SIZE, xft:NERD_FONT:style=Regular:size=ICON_SIZE, xft:EMOJI:style=Regular:size=ICON_SIZE
-URxvt.italicFont     : xft:FONT:style=Italic:size=FONT_SIZE, xft:FONT2:style=Italic:size=ICON_SIZE, xft:ICON:size=ICON_SIZE, xft:GLYPH:size=ICON_SIZE, xft:NERD_FONT:style=Regular:size=ICON_SIZE, xft:EMOJI:style=Regular:size=ICON_SIZE
-URxvt.boldItalicFont : xft:FONT:style=BoldItalic:size=FONT_SIZE, xft:FONT2:style=BoldItalic:size=ICON_SIZE, xft:ICON:size=ICON_SIZE, xft:GLYPH:size=ICON_SIZE, xft:NERD_FONT:style=Regular:size=ICON_SIZE, xft:EMOJI:style=Regular:size=ICON_SIZE
+URxvt.font           : xft:RobotoMono Nerd Font Mono:style=Medium:size=12, xft:InconsolataLGC Nerd Font Mono:style=Medium:size=13
+URxvt.boldFont       : xft:RobotoMono Nerd Font:style=Bold:size=12
+URxvt.italicFont     : xft:RobotoMono Nerd Font:style=Italic:size=12
+URxvt.boldItalicFont : xft:RobotoMono Nerd Font:style=BoldItalic:size=12
 
 Xft.dpi           : 96
 Xft.antialias     : true
 Xft.rgba          : rgb
-Xft.autohint      : false
+Xft.autohint      : true
 Xft.lcdfilter     : lcddefault
 Xft.hinting       : true
 Xft.hintstyle     : hintfull
@@ -29,7 +20,6 @@ URxvt.letterSpace : 0
 #define black0      #282C34
 #define black1      #1D2637
 #define black2      #1D2637
-#define black3      #1D2637
 #define red0        #FF6059
 #define red1        #FF6059
 #define green0      #5FFF98
@@ -44,7 +34,6 @@ URxvt.letterSpace : 0
 #define cyan1       #5FAFFF
 #define white0      #FFFFFF
 #define white1      #FFFFFF
-#define white2      #FFFFFF
 
 #define grey        #3E4452
 
@@ -70,8 +59,8 @@ URxvt.letterSpace : 0
 *.color0 : black2
 *.color7 : white1
 
-*.color8  : black3
-*.color15 : white2
+*.color8  : black2
+*.color15 : white1
 
 !*.foreground  : black0
 !*.background  : white0
@@ -81,12 +70,11 @@ URxvt.letterSpace : 0
 !*.color0 : white1
 !*.color7 : black2
 
-!*.color8  : white2
-!*.color15 : black3
+!*.color8  : white1
+!*.color15 : black2
 
 ! Settings ----------------------------------
 
-URxvt.perl-lib             : /usr/lib/urxvt/perl/
 URxvt.iconFile             : /home/josh/.icons/Custom/terminal.svg
 !URxvt.backgroundPixmap     : /home/josh/.urxvt/backgrounds/paper.png
 URxvt.windowName           : urxvt
@@ -111,7 +99,7 @@ URxvt.cursorBlock          : true
 !URxvt.inheritPixmap        : false
 URxvt.transparent          : false
 !URxvt.shading              : 0
-URxvt.depth                : 24
+URxvt.depth                : 32
 URxvt.secondaryScreen      : 1
 URxvt.secondaryScroll      : 0
 URxvt.iso14755             : false
@@ -122,6 +110,7 @@ Xcursor.size               : 24
 ! Extensions --------------------------------
 
 URxvt.perl-ext-common: clipboard,font-size
+URxvt.perl-lib       : /usr/lib/urxvt/perl/
 
 ! Clipboard [Ctrl+Shift+C/V]
 URxvt.clipboard.copycmd  : xclip -i -selection clipboard

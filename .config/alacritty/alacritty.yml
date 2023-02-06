@@ -118,7 +118,7 @@ font:
     #   - (Windows) Consolas
     family: MesloLGS Nerd Font
     # family: CodeNewRoman Nerd Font
-    # family: RobotoMono Nerd Font
+    # family: MesloLGS Nerd Font
     # family: Hack
     # family: JetBrains Mono
     # family: UbuntuMono Nerd Font
@@ -137,7 +137,7 @@ font:
     # value specified for the normal font.
     family: MesloLGS Nerd Font
     # family: CodeNewRoman Nerd Font
-    # family: RobotoMono Nerd Font
+    # family: MesloLGS Nerd Font
     # family: Hack
     # family: JetBrains Mono
     # family: UbuntuMono Nerd Font
@@ -156,7 +156,7 @@ font:
     # value specified for the normal font.
     family: MesloLGS Nerd Font
     # family: CodeNewRoman Nerd Font
-    # family: RobotoMono Nerd Font
+    # family: MesloLGS Nerd Font
     # family: Hack
     # family: JetBrains Mono
     # family: UbuntuMono Nerd Font
@@ -173,9 +173,9 @@ font:
     #
     # If the bold italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: MesloLGS Nerd Font
+    family: MesloLGS Nerd Font Mono
     # family: CodeNewRoman Nerd Font
-    # family: RobotoMono Nerd Font
+    # family: MesloLGS Nerd Font
     # family: Hack
     # family: JetBrains Mono
     # family: UbuntuMono Nerd Font

@@ -10,10 +10,10 @@ dunst &
 nitrogen --restore &
 #feh --bg-scale $HOME/Pictures/wallpaper.png &
 
-tint2 -c ~/.config/tint2/tint2rc &
+tint2 -c ~/.config/tint2/gaps.tint2rc &
 #plank && plank -n dock2 &
 
-$HOME/.config/polybar/Power-Arc/launch.sh &
+$HOME/.config/polybar/Gaps/launch.sh &
 
 #mpd ~/.config/mpd/mpd.conf &
 #[ ! -s ~/.config/mpd/pid ] && mpd &

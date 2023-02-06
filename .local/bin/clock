@@ -1,9 +1,9 @@
 #!/bin/bash
 
-CLOCK=$(LANG=en_US.UTF-8 LC_TIME=en_US.UTF-8 date +"  %l:%M %P ╱╱   %b. %d (%a.) ")
+CLOCK=$(LANG=en_US.UTF-8 LC_TIME=en_US.UTF-8 date +"  %l:%M %P  ╱╱  %A ")
 
 	if [[ $1 = "-i" ]]; then
-    echo "${CLOCK}"
+    echo "󰃰 ${CLOCK}"
 	else
     echo "${CLOCK}"
     fi

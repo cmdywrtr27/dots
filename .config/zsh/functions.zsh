@@ -1,5 +1,3 @@
-#!/usr/bin/zsh
-
 # Font information (fontq Inconsolata)
 fontq() {
 fc-list | rg -i $1
@@ -60,7 +58,7 @@ extract() {
 
 # Copy and go (cpg "filename")
 cpg() {
-  if [ -d "$2" ]; then
+  if [[ -d "$2" ]]; then
     cp $1 $2 && cd $2
   else
     cp $1 $2
@@ -69,7 +67,7 @@ cpg() {
 
 # Move and go (mvg "filename")
 mvg() {
-  if [ -d "$2" ]; then
+  if [[ -d "$2" ]]; then
     mv $1 $2 && cd $2
   else
     mv $1 $2
