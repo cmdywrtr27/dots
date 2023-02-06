@@ -1,0 +1,75 @@
+body {
+    background-color: #242730;
+}
+
+.info {
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    margin-left: 20px;
+    line-height: 0;
+    font-family: 'Poppins', sans-serif;
+}
+#greeting {
+    font-size: 48px;
+    color: #FFFFFF;
+}
+#time {
+    font-size: 40px;
+    color: #5FAFFF;
+}
+@media all and (max-width: 600px) {
+    .info {
+        justify-content: center;
+        align-items: center;
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+}
+.list_title
+{
+    font-size: 42px;
+}
+.lists {
+    display: flex;
+    margin-top: 90px;
+    flex-wrap: wrap;
+    vertical-align: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+}
+.watch, .social, .dev, .linux, .other {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #FFFFFF;
+    background-color: #242730;
+    border-radius: 12px;
+    vertical-align: center;
+    margin: 5px;
+    width: 230px;
+    padding: 40px;
+}
+a {
+    transition: color 0.3s ease;
+}
+a:visited, a:link, a:active {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 32px;
+    text-indent: 2px;
+    line-height: 1.6;
+}
+a:hover {
+    color: #5FAFFF;
+    font-style: italic;
+}
+#w,#s,#d,#l,#e
+{
+    color: #5FAFFF;
+}
+#mode {
+   filter: invert(100%) sepia(0%) saturate(1620%) hue-rotate(8deg) brightness(94%) contrast(88%)
+}
+#mode:hover {
+    filter: invert(56%) sepia(45%) saturate(6917%) hue-rotate(173deg) brightness(96%) contrast(82%) !important
+}
