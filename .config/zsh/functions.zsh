@@ -90,7 +90,14 @@ lynx -dump -hiddenlinks=ignore -nolist http://checkip.dyndns.org:8245/ | awk '{ 
 
 # Clock (clock)
 clock() {
-while true ; do clear ; echo "===========" ; date +" %l:%M %P" ; echo "===========" ; sleep 1 ; done
+while true ;
+do clear ;
+echo "===============================" ;
+date +" The time is %l:%M %P
+ The date is %B %e, %Y" ;
+echo "===============================" ;
+sleep 1 ;
+done
 }
 
 # Backup files (bu "filename")
