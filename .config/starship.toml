@@ -30,21 +30,21 @@ disabled = false
 description = "Display icon for each home folder"
 command = """
 if [[ "$PWD" = "$HOME" ]]; then
-    echo ""
+    echo " "
 elif [[ "$PWD" = "$HOME/Documents" ]]; then
-    echo ""
+    echo " "
 elif [[ "$PWD" = "$HOME/Downloads" ]]; then
-    echo "ﲐ"
+    echo "ﲐ "
 elif [[ "$PWD" = "$HOME/Music" ]]; then
-    echo ""
+    echo " "
 elif [[ "$PWD" = "$HOME/Pictures" ]]; then
-    echo ""
+    echo " "
 elif [[ "$PWD" = "$HOME/Videos" ]]; then
-    echo ""
+    echo " "
 elif [[ "$PWD" = "$HOME/.local/bin" ]]; then
-    echo ""
+    echo " "
 else
-    echo "ﱮ"
+    echo "ﱮ "
 fi
 """
 when = "true"
@@ -64,14 +64,14 @@ use_os_path_sep = true
 
 [time]
 style = "fg:#FFFFFF bg:#5FAFFF"
-format = '[ 󱑎 $time ]($style)'
+format = '[  $time ]($style)'
 time_format = '%l:%M%P'
 disabled = true
 
 [cmd_duration]
 min_time = 750
 style = "fg:#FFFFFF bg:#3E4452"
-format = "[ 󰔛 $duration ]($style)"
+format = "[ 神 $duration ]($style)"
 disabled = false
 
 [git_branch]

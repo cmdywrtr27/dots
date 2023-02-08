@@ -1,9 +1,5 @@
 #!/bin/sh
 
-# ufetch-arch - tiny system info for arch
-
-## INFO
-
 # user is already defined
 host="$(cat /etc/hostname)"
 os='Arch Linux'
@@ -12,7 +8,44 @@ uptime="$(uptime -p | sed 's/up //')"
 packages="$(pacman -Q | wc -l)"
 shell="$(basename "${SHELL}")"
 
+f=3 b=4
+for j in f b; do
+  for i in {0..7}; do
+    printf -v $j$i %b "\e[${!j}${i}m"
+  done
+done
+d=$'\e[1m' # bold
+t=$'\e[0m' # reset
+v=$'\e[7m' # reverse
+u=$'\e[21m' # underline
+
 ## UI DETECTION
+
+mem() {
+  free --mega | sed -n -E '2s/^[^0-9]*([0-9]+) *([0-9]+).*/'"${space}"'\2 \/ \1 MB/p'
+}
+
+pkg() {
+    pack="$(which {apt,pacman,yum,rpm} 2>/dev/null | grep -v "not found" | awk -F/ 'NR==1{print $NF}')"
+    case "${pack}" in
+        "apt")
+        total=$(apt list --installed 2>/dev/null | wc -l)
+        ;;
+        "pacman")
+        total=$(pacman -Q | wc -l)
+        ;;
+        "yum")
+        total=$(yum list installed | wc -l)
+        ;;
+        "rpm")
+        total=$(rpm -qa | wc -l)
+        ;;
+        "")
+        total="Unknown"
+        ;;
+    esac
+echo $total
+}
 
 parse_rcs() {
 	for f in "${@}"; do
@@ -67,17 +100,18 @@ lc="${reset}${bold}${blue}"         # labels
 nc="${reset}${bold}${blue}"         # user and hostname
 ic="${reset}"                       # info
 c0="${reset}${blue}"                # first color
+wb="${reset}${bold}${white}"        # bold white
 
 ## OUTPUT
 cat <<EOF
 
-${c0}        /\         ${co}${USER}${ic}@${c0}${host}${reset}
-${c0}       /  \        ---------
-${c0}      /\   \       ${lc}  ${ic}${os}${reset}
-${c0}     /      \      ${lc}  ${ic}${kernel}${reset}
-${c0}    /   ,,   \     ${lc}  ${ic}${uptime}${reset}
-${c0}   /   |  |  -\    ${lc}  ${ic}${shell}${reset}
-${c0}  /_-''    ''-_\   ${lc}  ${ic}${ui}${reset}
-
+${nc}        .           ${c0}${USER}${ic}@${ic}${c0}${host}${reset}
+${nc}       / \          ${lc}⎻⎻⎻⎻⎻⎻⎻⎻⎻${reset}
+${nc}      /   \         ${lc}  ${ic}${os}${reset}
+${nc}     /^.   \        ${lc}  ${ic}${kernel}${reset}
+${nc}    /  .-.  \       ${lc}󰌢  ${ic}${ui}${reset}
+${nc}   /  (   ) _\      ${lc}  ${ic}${shell}${reset}
+${nc}  / _.~   ~._^\     ${lc}  ${ic}${uptime}${reset}
+${nc} /.^         ^.\    ${lc}󰮯  $f1󰊠  $t$f2󰊠  $t$f3󰊠  $t$f4󰊠  $t$f5󰊠  $t$f6󰊠  $t$f7󰊠
 EOF
-source $HOME/.local/bin/color_scripts/panes
+#source $HOME/.local/bin/color_scripts/panes

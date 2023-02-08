@@ -1,9 +1,10 @@
 ! Font ---------------------------------------
 
-URxvt.font           : xft:RobotoMono Nerd Font Mono:style=Medium:size=12, xft:InconsolataLGC Nerd Font Mono:style=Medium:size=13
-URxvt.boldFont       : xft:RobotoMono Nerd Font:style=Bold:size=12
-URxvt.italicFont     : xft:RobotoMono Nerd Font:style=Italic:size=12
-URxvt.boldItalicFont : xft:RobotoMono Nerd Font:style=BoldItalic:size=12
+!URxvt.font           : xft:RobotoMono Nerd Font Mono:style=Medium:size=12, xft:Iosevka Nerd Font:style=Medium:size=13, xft:Font Awesome 5 Free Solid:style=Solid, xft:Material Design Icons:style=Regular, xft:feather:style=Regular
+URxvt.font           : xft:SFMono Nerd Font:style=Medium:size=12, xft:RobotoMono Nerd Font Mono:style=Medium:size=12, xft:FontAwesome:style=Regular, xft:Material\-Design\-Iconic\-Font:style=Design-Iconic-Font, xft:feather:style=Regular, xft:icomoon:style=Regular, xft:octicons:style=Medium
+URxvt.boldFont       : xft:SFMono Nerd Font:style=Bold:size=12
+URxvt.italicFont     : xft:SFMono Nerd Font:style=Italic:size=12
+URxvt.boldItalicFont : xft:SFMono Nerd Font:style=BoldItalic:size=12
 
 Xft.dpi           : 96
 Xft.antialias     : true

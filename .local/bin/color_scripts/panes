@@ -10,6 +10,22 @@ d=$'\e[1m' # bold
 t=$'\e[0m' # reset
 v=$'\e[7m' # reverse
 
+#cat << EOF
+#  $f1 $t$f2 $t$f3 $t$f4 $t$f5 $t$f6 $t$f7
+#EOF
+
+#cat << EOF
+#  $f1$t$f2$t$f3$t$f4$t$f5$t$f6$t$f7
+#EOF
+
+#cat << EOF
+#$f1  $t$f2  $t$f3  $t$f4  $t$f5  $t$f6  $t$f7
+#EOF
+
+#cat << EOF
+# $f8󰮯    $f1󰊠 $t$f2󰊠 $t$f3󰊠 $t$f4󰊠 $t$f5󰊠 $t$f6󰊠 $t$f7󰊠
+#EOF
+
 cat << EOF
-  $f1 $t$f2 $t$f3 $t$f4 $t$f5 $t$f6 $t$f7
+ $f1󰊠  $t$f2󰊠  $t$f3󰊠  $t$f4󰊠  $t$f5󰊠  $t$f6󰊠  $t$f7󰊠
 EOF
