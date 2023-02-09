@@ -23,7 +23,7 @@ add_newline = true
 [status]
 style = "fg:#FF0000 bg:#5FAFFF"
 symbol = ""
-format = '[ $symbol ]($style)'
+format = "[ $symbol ]($style)"
 disabled = false
 
 [custom.icon]
@@ -49,23 +49,23 @@ fi
 """
 when = "true"
 style = "fg:#3E4452 bg:#5FAFFF"
-format = '[ $output ]($style)'
+format = "[ $output ]($style)"
 
 [directory]
 style = "fg:#FFFFFF bg:#3E4452"
-format = '[ $path ]($style)'
+format = "[ $path ]($style)"
+truncate_to_repo = true
 truncation_length = 2
 truncation_symbol = "..."
-truncate_to_repo = true
-home_symbol = '~'
+home_symbol = "~"
 fish_style_pwd_dir_length = 2
 use_logical_path = true
 use_os_path_sep = true
 
 [time]
 style = "fg:#FFFFFF bg:#5FAFFF"
-format = '[  $time ]($style)'
-time_format = '%l:%M%P'
+format = "[  $time ]($style)"
+time_format = "%l:%M%P"
 disabled = true
 
 [cmd_duration]
@@ -76,9 +76,9 @@ disabled = false
 
 [git_branch]
 style = "fg:#FFFFFF bg:#5FAFFF"
-format = '[ $symbol $branch]($style)'
+format = "[ $symbol $branch]($style)"
 symbol = " "
 
 [git_status]
 style = "fg:#FFFFFF bg:#5FAFFF"
-format = '[ ($all_status) ]($style)'
+format = "[ ($all_status) ]($style)"
