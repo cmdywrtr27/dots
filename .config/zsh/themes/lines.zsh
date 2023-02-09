@@ -6,7 +6,7 @@ if [[ "$PWD" = "$HOME" ]]; then
 elif [[ "$PWD" = "$HOME/Documents" ]]; then
     echo " "
 elif [[ "$PWD" = "$HOME/Downloads" ]]; then
-    echo " "
+    echo "ﲐ "
 elif [[ "$PWD" = "$HOME/Music" ]]; then
     echo " "
 elif [[ "$PWD" = "$HOME/Pictures" ]]; then
