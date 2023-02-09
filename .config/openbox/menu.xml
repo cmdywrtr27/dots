@@ -3,17 +3,17 @@
 	<menu id="root-menu" label="OpenBox 3">
 		<item label="Terminal">
 			<action name="Execute">
-				<execute>alacritty</execute>
+				<execute>lxterminal</execute>
 			</action>
 		</item>
 		<item label="Browser">
 			<action name="Execute">
-				<execute>firefox</execute>
+				<execute>brave</execute>
 			</action>
 		</item>
 		<item label="File Manager">
 			<action name="Execute">
-				<execute>pcmanfm</execute>
+				<execute>nemo</execute>
 			</action>
 		</item>
 		<separator/>
