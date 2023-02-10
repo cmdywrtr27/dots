@@ -71,7 +71,7 @@ disabled = true
 [cmd_duration]
 min_time = 750
 style = "fg:#FFFFFF bg:#3E4452"
-format = "[ 神 $duration ]($style)"
+format = "[ 神$duration ]($style)"
 disabled = false
 
 [git_branch]
