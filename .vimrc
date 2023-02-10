@@ -6,9 +6,7 @@ filetype off
 call plug#begin('~/.vim/plugged')
 
 Plug 'junegunn/vim-plug'
-"Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'ycm-core/YouCompleteMe'
-Plug 'connorholyday/vim-snazzy'
 Plug 'kyoz/purify', { 'rtp': 'vim' }
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -16,15 +14,11 @@ Plug 'junegunn/fzf.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'mengelbrecht/lightline-bufferline'
 Plug 'edkolev/tmuxline.vim'
-"Plug 'vim-airline/vim-airline'
-"Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-commentary'
 Plug 'airblade/vim-gitgutter'
-Plug 'tmux-plugins/vim-tmux'
 Plug 'mbbill/undotree'
 Plug 'ryanoasis/vim-devicons'
 
