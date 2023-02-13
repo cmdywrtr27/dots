@@ -1,0 +1,35 @@
+* {
+    fg:      #FFFFFF;
+    bg:      #242730;
+    border:  #3B4252;
+
+    shade1:  #0D47A1;
+    shade2:  #1565C0;
+    shade3:  #1976D2;
+    shade4:  #1E88E5;
+    shade5:  #2196F3;
+    shade6:  #42A5F5;
+    shade7:  #64B5F6;
+    shade8:  #90CAF9;
+
+    color0:  #1D2637;
+    color8:  #1D2637;
+    color1:  #FF6059;
+    color9:  #FF6059;
+    color2:  #5FFF87;
+    color10: #5FFF87;
+    color3:  #FFFF87;
+    color11: #FFFF87;
+    color4:  #5FAFFF;
+    color12: #5FAFFF;
+    color5:  #AF87FF;
+    color13: #AF87FF;
+    color6:  #5FAFFF;
+    color14: #5FAFFF;
+    color7:  #FFFFFF;
+    color15: #FFFFFF;
+}
+
+/*
+vim:ft=css:nowrap
+*/
