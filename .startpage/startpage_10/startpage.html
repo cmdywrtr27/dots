@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <script async type="text/javascript" src="script.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        <title>New Tab</title>
+    </head>
+    <body>
+        <div class="search_block">
+                <form id="search_eng_form" method="get" action="https://www.duckduckgo.com/">
+                    <button type="button" class="se_btn" id="se_button"><img id="se_icon"src="icons/ddg.svg" class="filter-white"></button><input type="search" id="search" placeholder="Searching with DuckDuckGo" autocomplete="off" name="q" autofocus><button type="submit" class="go" id="go_btn">GO</button>
+                </form>
+        </div>
+        <div class="card_list">
+            <div class="card" id="media">
+                <p class="card_title" id="m">Media</p>
+                <a href="https://www.youtube.com">YouTube</a>
+                <a href="https://www.netflix.com/browse">Netflix</a>
+                <a href="http://192.168.1.118:8096">Jellyfin</a>
+            </div>
+            <div class="card" id="favs">
+                <p class="card_title" id="f">Favs</p>
+                <a href="https://www.reddit.com/">Reddit</a>
+                <a href="https://192.168.1.118:447">Nextcloud</a>
+                <a href="https://hub.docker.com/">Docker</a>
+            </div>
+            <div class="card" id="code">
+                <p class="card_title" id="c">Code</p>
+                <a href="https://github.com/">Github</a>
+                <a href="https://codecademy.com/">Codecademy</a>
+                <a href="https://freecodecamp.org/">Code Camp</a>
+            </div>
+            <div class="card" id="linux">
+                <p class="card_title" id="l">Linux</p>
+                <a href="https://wiki.archlinux.org/">Arch Wiki</a>
+                <a href="https://aur.archlinux.org/">AUR</a>
+                <a href="https://store.kde.org/">Pling</a>
+            </div>
+            <div class="card" id="homelab">
+                <p class="card_title" id="h">Homelab</p>
+                <a href="http://192.168.1.118:7878">Radarr</a>
+                <a href="http://192.168.1.118:8989">Sonarr</a>
+                <a href="http://192.168.1.118:8384">Syncthing</a>
+            </div>
+        </div>
+            <p id="time"></p>
+        <h2>#10</h2>
+    </body>
+</html>
