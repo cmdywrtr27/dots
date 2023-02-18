@@ -109,3 +109,15 @@ cp $1 ${1}-`date +%Y-%m-%d_%H:%M:%S`.bak ;
 chpwd() {
 exa -l --grid --icons --color=always --git --sort=name --no-user --no-time --no-filesize --no-permissions
 }
+
+# Update your Arch Linux machine
+update() {
+echo "Updating mirrors..."
+sudo reflector --verbose --country "United States" -l 5 --sort rate --save /etc/pacman.d/mirrorlist
+echo "Updating repo\'s"
+sudo pacman -Syyy
+yay -Syyy
+echo "Updating system"
+sudo pacman -Syu --noconfirm
+yay -Syu --noconfirm
+}
